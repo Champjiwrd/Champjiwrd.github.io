@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Flex, Center } from "@chakra-ui/react";
-import Image from "next/image";
+// import Image from "next/image";
 // import './styles/image.css'
 // import Image from "next/image";
 
@@ -25,7 +25,7 @@ export default function profile() {
               borderColor: "white",
             }}
           >
-            <Image
+            <img
               src="/profile/profile.png"
               alt="champ"
               width={imagesize}

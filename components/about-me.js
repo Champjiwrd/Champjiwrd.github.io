@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Image,Icon,Flex } from "@chakra-ui/react";
+import { Box, Heading,Icon,Flex } from "@chakra-ui/react";
 import CircleIcon from "./circle-icon";
 
 export default function AboutMe() {
