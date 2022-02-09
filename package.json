@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "npm run build && next export && touch out/.nojekyll",
+    "export": "next export",
     "serve": "npm run export && serve out",
     "deploy": "npm run export && node gh-pages.js"
   },
