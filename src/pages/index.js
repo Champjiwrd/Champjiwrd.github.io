@@ -19,7 +19,7 @@ import Education from "../components/education";
 import Experiences from "../components/experiences";
 import Contact from "../components/contact";
 import { ChakraProvider } from "@chakra-ui/react";
-
+import Project from "../components/project";
 import Head from "next/head";
 import Skill from "../components/skill";
 
@@ -35,12 +35,12 @@ export default function index() {
           <Box marginLeft={0}>
             <AboutMe />
             <Experiences />
+            <Project />
             <Skill />
             <Education />
           </Box>
         </VerticalTimeline>
         <Contact />
-
       </div>
     </Box>
   );
