@@ -28,7 +28,12 @@ export default function Project1() {
         <ProjectItem title={title} subtitle={subtitle} />
       </div>
 
-      <Modal onClose={onClose} size="full" isOpen={isOpen}>
+      <Modal
+        onClose={onClose}
+        size="6xl"
+        isOpen={isOpen}
+        scrollBehavior={"inside"}
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
@@ -40,11 +45,14 @@ export default function Project1() {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Heading marginTop={6} marginBottom={2} size="md"> Video Demo</Heading>
+            <Heading marginTop={6} marginBottom={2} size="md">
+              {" "}
+              Video Demo
+            </Heading>
             <YoutubeEmbed embedId="HHnR7vX4W6Y" />
 
             <Heading marginTop={6} size="md">
-              Skill using
+              TECHNOLOGIES
             </Heading>
             <UnorderedList>
               <ListItem>
