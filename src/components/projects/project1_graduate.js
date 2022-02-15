@@ -45,6 +45,7 @@ export default function Project1() {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
+          System used for tract suspect person who has exactly what is needed (such as shirt, bag, color) from CCTV.
             <Heading marginTop={6} marginBottom={2} size="md">
               {" "}
               Video Demo
@@ -56,7 +57,7 @@ export default function Project1() {
             </Heading>
             <UnorderedList>
               <ListItem>
-                King Mongkut&apos;s Institute Of Technology Ladkrabang
+                YOLOv4 Object Detection
               </ListItem>
               <ListItem>Color classification</ListItem>
             </UnorderedList>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Heading,  Flex } from "@chakra-ui/react";
-
+import { Box, Heading, Flex, Spacer } from "@chakra-ui/react";
+import { BsInfoCircle } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 export default function projectItem({ title, subtitle }) {
@@ -8,18 +8,17 @@ export default function projectItem({ title, subtitle }) {
 
   return (
     <motion.div
-      initial={{ scale: 1 }}
-      whileHover={{ scale: 1.05 }}
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0.8 },
       }}
       className="card-project"
     >
-      <Box padding={2}
-      className="card-project"
-      >
+      <Box padding={2} className="card-project">
         <Flex>
           <Box
             borderRadius="lg"
@@ -28,7 +27,7 @@ export default function projectItem({ title, subtitle }) {
               color: "#435055",
               width: "130px",
               height: "80px",
-              minWidth:"130px",
+              minWidth: "130px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -38,11 +37,29 @@ export default function projectItem({ title, subtitle }) {
               {title.charAt(0)}
             </Box>
           </Box>
-          <Box marginLeft={4}>
+          <Box display={{ base: "none", sm: "block" }} marginLeft={4}>
             <Heading size="md">{title}</Heading>
             <Box style={gradeStyle}>{subtitle}</Box>
           </Box>
+          <Spacer display={{ base: "none", sm: "flex" }} />
+          <Box
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            display={{ base: "none", sm: "flex" }}
+          >
+            <BsInfoCircle size={20} />
+          </Box>
         </Flex>
+        <Box
+          display={{ base: "block", sm: "none" }}
+          marginLeft={0}
+          marginTop={2}
+        >
+          <Heading size="md">{title}</Heading>
+          <Box style={gradeStyle}>{subtitle}</Box>
+        </Box>
       </Box>
     </motion.div>
   );
