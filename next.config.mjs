@@ -1,12 +1,5 @@
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
-  assetPrefix: './',
+const isProd = process.env.NODE_ENV === 'production';
+module.exports = {
+  reactStrictMode: true,
+  assetPrefix: isProd ? '/' : '',
 };
-
-export default nextConfig;
