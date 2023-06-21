@@ -120,7 +120,7 @@ export default function Project2() {
             </Heading>
             <Link
               href="
-            https://voccoli.herokuapp.com/
+            https://voccoli.com/
             "
               target="_blank"
             >
