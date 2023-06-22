@@ -4,7 +4,6 @@ import CircleIcon from "./circle-icon";
 import { motion } from "framer-motion";
 
 export default function Education() {
-  const gradeStyle = { color: "#E23E57", fontSize: 14 };
   const yearStyle = { color: "#FFBB56" };
   const educationList = [
     {
@@ -61,7 +60,6 @@ export default function Education() {
                     <UnorderedList>
                       <ListItem>{item.school}</ListItem>
                     </UnorderedList>
-                    <Box style={gradeStyle}>({item.gpa})</Box>
                   </Box>
                 </Flex>
               </motion.div>
