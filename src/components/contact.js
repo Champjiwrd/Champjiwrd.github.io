@@ -32,7 +32,7 @@ export default function Contact() {
     },
     {
       link: "mailto:warodom.baiudom@gmail.com",
-      label: "warodom.baiudom@gmail.com",
+      label: "mail",
       icon: <Icon as={IoMail} />,
     },
     {

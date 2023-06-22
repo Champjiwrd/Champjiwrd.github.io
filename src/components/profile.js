@@ -34,9 +34,9 @@ export default function profile() {
               // objectFit="cover"
             />
           </Box>
-          <Box marginLeft={10}>
-            <Heading>Warodom Baiudom</Heading>
-            <Heading size="md">
+          <Box marginLeft={5}>
+            <Heading size="xl">Warodom Baiudom</Heading>
+            <Heading size="sm">
             Champignon &#127812;
             </Heading>
           </Box>

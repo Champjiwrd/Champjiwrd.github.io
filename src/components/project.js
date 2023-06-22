@@ -13,7 +13,6 @@ export default function Projects() {
         <Box>
           <Heading marginBottom={6}>Projects</Heading>
           {/* <Box>{projects}</Box> */}
-          <Project3 key="vue" />
           <Project2 key="toeic" />
           <Project1 key="graduate" />
         </Box>
