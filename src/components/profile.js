@@ -7,7 +7,7 @@ import { Box, Heading, Flex, Center } from "@chakra-ui/react";
 export default function profile() {
   const imagesize = 200;
   return (
-    <Box marginTop={100}>
+    <Box marginTop={50}>
       <Flex >
         <Center marginBottom={3}>
           <Box
@@ -37,7 +37,7 @@ export default function profile() {
           <Box marginLeft={5}>
             <Heading size="xl">Warodom Baiudom</Heading>
             <Heading size="sm">
-            Champignon &#127812;
+            Champ
             </Heading>
           </Box>
         </Center>

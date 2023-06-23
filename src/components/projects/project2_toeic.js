@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Box,
   Button,
@@ -14,51 +14,51 @@ import {
   ListItem,
   Link,
   Icon,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
-import ProjectItem from "../projectItem";
-import { FaChrome } from "react-icons/fa";
-import { BiLinkAlt } from "react-icons/bi";
-import "react-awesome-slider/dist/styles.css";
-import { Carousel } from "react-carousel-minimal";
+import ProjectItem from '../projectItem';
+import { FaChrome } from 'react-icons/fa';
+import { BiLinkAlt } from 'react-icons/bi';
+import 'react-awesome-slider/dist/styles.css';
+import { Carousel } from 'react-carousel-minimal';
 
 export default function Project2() {
-  const title = "TOEIC Project";
-  const subtitle = "Django Website, 2021";
+  const title = 'Voccoli Project';
+  const subtitle = 'Vocabulary Website';
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const gradeStyle = { color: "#FFBB56", fontSize: 14 };
+  const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
   const data = [
     {
-      image: "/project2/image1.png",
-      caption: "",
+      image: '/project2/image1.png',
+      caption: '',
     },
     {
-      image: "/project2/image2.png",
-      caption: "",
+      image: '/project2/image2.png',
+      caption: '',
     },
     {
-      image: "/project2/image3.png",
-      caption: "",
+      image: '/project2/image3.png',
+      caption: '',
     },
     {
-      image: "/project2/image4.png",
-      caption: "",
+      image: '/project2/image4.png',
+      caption: '',
     },
     {
-      image: "/project2/image5.png",
-      caption: "",
+      image: '/project2/image5.png',
+      caption: '',
     },
   ];
   const captionStyle = {
-    fontSize: "2em",
-    fontWeight: "bold",
+    fontSize: '2em',
+    fontWeight: 'bold',
   };
   const slideNumberStyle = {
-    fontSize: "20px",
-    fontWeight: "bold",
+    fontSize: '20px',
+    fontWeight: 'bold',
   };
-  const modalSize = window.innerWidth < 600 ? "full" : "6xl"; // Check window width for responsiveness
+  const modalSize = window.innerWidth < 600 ? 'full' : '6xl'; // Check window width for responsiveness
   return (
     <div>
       <div onClick={onOpen}>
@@ -69,7 +69,7 @@ export default function Project2() {
         onClose={onClose}
         size={modalSize}
         isOpen={isOpen}
-        scrollBehavior={"inside"}
+        scrollBehavior={'inside'}
       >
         <ModalOverlay />
         <ModalContent>
@@ -102,10 +102,10 @@ export default function Project2() {
               thumbnails={false}
               thumbnailWidth="100px"
               style={{
-                textAlign: "center",
-                maxWidth: "850px",
-                maxHeight: "500px",
-                margin: "auto",
+                textAlign: 'center',
+                maxWidth: '850px',
+                maxHeight: '500px',
+                margin: 'auto',
               }}
             />
             <Heading marginTop={6} size="md">
@@ -119,12 +119,7 @@ export default function Project2() {
             <Heading marginTop={6} size="md">
               DEMO
             </Heading>
-            <Link
-              href="
-            https://voccoli.com/
-            "
-              target="_blank"
-            >
+            <Link href="https://voccoli.com/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -133,10 +128,6 @@ export default function Project2() {
                 Visit Voccoli <Icon as={BiLinkAlt} />
               </Button>
             </Link>
-            <Box marginBottom={6} style={{ fontSize: "14px" }}>
-              *For test {"{ "}
-              username: test.voccoli, password: Test1234{" }"}*
-            </Box>
           </ModalBody>
           {/* <ModalFooter>
             <Button onClick={onClose}>Close</Button>
