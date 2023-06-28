@@ -48,7 +48,7 @@ import Experiences from './components/experiences';
 import Contact from './components/contact';
 import Project from './components/project';
 import Skill from './components/skill';
-import { Container, Box, ChakraProvider } from '@chakra-ui/react';
+import { Container, ChakraProvider } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import theme from './theme';
 // import { ColorModeSwitcher } from './ColorModeSwitcher';

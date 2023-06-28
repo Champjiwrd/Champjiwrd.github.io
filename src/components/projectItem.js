@@ -2,17 +2,13 @@ import React from 'react';
 import {
   Box,
   Heading,
-  Flex,
-  Spacer,
   Card,
   CardBody,
   Stack,
   Text,
-  Image,
   CardFooter,
   Button,
 } from '@chakra-ui/react';
-import { BsInfoCircle } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 
 export default function projectItem({ title, subtitle }) {
