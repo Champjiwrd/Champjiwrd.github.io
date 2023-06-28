@@ -58,7 +58,7 @@ export default function Project2() {
     fontSize: '20px',
     fontWeight: 'bold',
   };
-  const modalSize = window.innerWidth < 600 ? 'full' : '6xl'; // Check window width for responsiveness
+  const modalSize = 'full'; // Check window width for responsiveness
   return (
     <div>
       <div onClick={onOpen}>
@@ -70,6 +70,7 @@ export default function Project2() {
         size={modalSize}
         isOpen={isOpen}
         scrollBehavior={'inside'}
+        isCentered
       >
         <ModalOverlay />
         <ModalContent>

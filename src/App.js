@@ -40,26 +40,19 @@
 // }
 
 // export default App;
-
-import React from "react";
-import Profile from "./components/profile";
-import AboutMe from "./components/about-me";
-import Education from "./components/education";
-import Experiences from "./components/experiences";
-import Contact from "./components/contact";
-import Project from "./components/project";
-import Skill from "./components/skill";
-import { VerticalTimeline } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import {
-  Container,
-  Box,
-  ChakraProvider,
-  Grid
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-// import theme from './theme' 
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+import React from 'react';
+import Profile from './components/profile';
+import AboutMe from './components/about-me';
+import Education from './components/education';
+import Experiences from './components/experiences';
+import Contact from './components/contact';
+import Project from './components/project';
+import Skill from './components/skill';
+import { Container, Box, ChakraProvider } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import theme from './theme';
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
+// import './components/styles/verticalTimeline.css';
 
 export default function App() {
   const variants = {
@@ -68,32 +61,23 @@ export default function App() {
     exit: { opacity: 0, x: -0, y: 20 },
   };
   return (
-    <ChakraProvider >
-      <Grid>
-        <ColorModeSwitcher justifySelf="flex-end" />
-      </Grid>
+    <ChakraProvider theme={theme}>
       <motion.div
         initial="hidden"
         animate="enter"
         exit="exit"
         variants={variants}
-        transition={{ duration: 0.6, type: "easeInOut" }}
-        style={{ position: "relative" }}
+        transition={{ duration: 0.6, type: 'easeInOut' }}
+        style={{ position: 'relative' }}
       >
         <Container>
           <Profile />
-          <div style={{ marginTop: "-15px", marginLeft: "65px" }}>
-            <VerticalTimeline layout={"1-column-left"}>
-              <Box marginLeft={0}>
-                <AboutMe />
-                <Experiences />
-                <Project />
-                <Skill />
-                <Education />
-              </Box>
-            </VerticalTimeline>
-            <Contact />
-          </div>
+          <AboutMe />
+          <Experiences />
+          <Project />
+          <Skill />
+          <Education />
+          <Contact />
         </Container>
       </motion.div>
     </ChakraProvider>

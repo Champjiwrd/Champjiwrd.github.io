@@ -1,21 +1,26 @@
-import React from "react";
-import { Box, Heading, UnorderedList, ListItem, Flex } from "@chakra-ui/react";
-import CircleIcon from "./circle-icon";
-import { motion } from "framer-motion";
+import React from 'react';
+import {
+  Box,
+  Heading,
+  UnorderedList,
+  ListItem,
+  Flex,
+} from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 export default function Experiences() {
   // const gradeStyle = { color: "#FFBB56", fontSize: 14 };
-  const yearStyle = { color: "#FFBB56" };
+  const yearStyle = { color: '#FFBB56' };
   const experiencesList = [
     {
-      duration: "2021 - Present",
-      position: "Junior Developer",
-      company: "Metamedia Technology Co., Ltd.",
+      duration: '2021 - Present',
+      position: 'Junior Developer',
+      company: 'Metamedia Technology Co., Ltd.',
     },
     {
-      duration: "2020",
-      position: "Back-End Developer Internship",
-      company: "Unixdev Co., Ltd",
+      duration: '2020',
+      position: 'Back-End Developer Internship',
+      company: 'Unixdev Co., Ltd',
     },
   ];
   return (
@@ -25,13 +30,12 @@ export default function Experiences() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.6 }}
           variants={{
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 1 },
           }}
         >
-          <CircleIcon boxSize={10} color="white.500" />
         </motion.div>
         <Box>
           <Heading marginBottom={6}>Experiences</Heading>
@@ -42,7 +46,7 @@ export default function Experiences() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.6 }}
                 variants={{
                   visible: { opacity: 1, scale: 1 },
                   hidden: { opacity: 0, scale: 0 },
@@ -50,7 +54,7 @@ export default function Experiences() {
               >
                 <Flex marginTop={4} key={index}>
                   <Box
-                    display={{ base: "none", sm: "flex" }}
+                    display={{ base: 'none', sm: 'flex' }}
                     style={yearStyle}
                     maxWidth={150}
                     minWidth={130}
@@ -60,7 +64,7 @@ export default function Experiences() {
 
                   <Box>
                     <Box
-                      display={{ base: "flex", sm: "none" }}
+                      display={{ base: 'flex', sm: 'none' }}
                       style={yearStyle}
                       maxWidth={150}
                       minWidth={130}

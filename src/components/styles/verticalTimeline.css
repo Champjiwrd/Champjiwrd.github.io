@@ -1,0 +1,13 @@
+.costum-line-blacddk:before {
+  background: black;
+}
+.costum-lineh:before {
+  background: none;
+}
+
+.costum-line-white:before {
+    background: white;
+  }
+  .costum-lineh:before {
+    background: none;
+  }

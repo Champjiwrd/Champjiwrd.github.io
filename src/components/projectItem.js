@@ -1,66 +1,68 @@
-import React from "react";
-import { Box, Heading, Flex, Spacer } from "@chakra-ui/react";
-import { BsInfoCircle } from "react-icons/bs";
-import { motion } from "framer-motion";
+import React from 'react';
+import {
+  Box,
+  Heading,
+  Flex,
+  Spacer,
+  Card,
+  CardBody,
+  Stack,
+  Text,
+  Image,
+  CardFooter,
+  Button,
+} from '@chakra-ui/react';
+import { BsInfoCircle } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 export default function projectItem({ title, subtitle }) {
-  const gradeStyle = { color: "#FFBB56", fontSize: 14 };
+  const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.6 }}
       variants={{
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0.8 },
       }}
       className="card-project"
     >
-      <Box padding={2} className="card-project">
-        <Flex>
-          <Box
-            borderRadius="lg"
-            style={{
-              background: "#A3F7BF",
-              color: "#435055",
-              width: "130px",
-              height: "80px",
-              minWidth: "130px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Box style={{ fontSize: "30px", fontWeight: "bold" }}>
-              {title.charAt(0)}
-            </Box>
-          </Box>
-          <Box display={{ base: "none", sm: "block" }} marginLeft={4}>
-            <Heading size="md">{title}</Heading>
-            <Box style={gradeStyle}>{subtitle}</Box>
-          </Box>
-          <Spacer display={{ base: "none", sm: "flex" }} />
-          <Box
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            display={{ base: "none", sm: "flex" }}
-          >
-            <BsInfoCircle size={20} />
-          </Box>
-        </Flex>
+      <Card direction={{ base: 'column', sm: 'row' }} overflow="hidden">
         <Box
-          display={{ base: "block", sm: "none" }}
-          marginLeft={0}
-          marginTop={2}
+          bg="#A3F7BF"
+          flexShrink={0}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          color="black"
+          fontSize="4xl"
+          fontWeight="bold"
+          textTransform="uppercase"
+          width={{ base: '100%', sm: '200px' }}
+          h={{ base: '200px', sm: 'auto' }}
         >
-          <Heading size="md">{title}</Heading>
-          <Box style={gradeStyle}>{subtitle}</Box>
+          {title.charAt(0)}
         </Box>
-      </Box>
+
+        <Stack>
+          <CardBody>
+            <Heading size="md">{title}</Heading>
+
+            <Text style={gradeStyle} py="2">
+              {subtitle}
+            </Text>
+          </CardBody>
+
+          <CardFooter>
+            <Button variant="solid" colorScheme="blue">
+              Detail
+            </Button>
+          </CardFooter>
+        </Stack>
+      </Card>
     </motion.div>
   );
 }
