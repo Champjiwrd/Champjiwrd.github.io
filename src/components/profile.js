@@ -7,7 +7,7 @@ import { Box, Heading, Flex, Center } from '@chakra-ui/react';
 export default function profile() {
   const imagesize = 200;
   return (
-    <Box marginTop={50} marginBottom={10}>
+    <Box mt={'90px'}>
       <Flex>
         <Center marginBottom={3}>
           <Box

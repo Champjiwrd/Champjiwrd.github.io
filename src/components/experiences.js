@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Heading,
-  UnorderedList,
-  ListItem,
-  Flex,
-} from '@chakra-ui/react';
+import { Box, Heading, UnorderedList, ListItem, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 export default function Experiences() {
@@ -24,7 +18,7 @@ export default function Experiences() {
     },
   ];
   return (
-    <Box marginBottom={10}>
+    <Box mt={'90px'}>
       <Flex>
         <motion.div
           initial="hidden"
@@ -35,8 +29,7 @@ export default function Experiences() {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 1 },
           }}
-        >
-        </motion.div>
+        ></motion.div>
         <Box>
           <Heading marginBottom={6}>Experiences</Heading>
           {experiencesList.map((item, index) => {

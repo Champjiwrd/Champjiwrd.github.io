@@ -1,9 +1,8 @@
 import React from 'react';
 import { Box, Heading, Flex } from '@chakra-ui/react';
-
 export default function AboutMe() {
   return (
-    <Box marginBottom={10}>
+    <Box mt={'90px'}>
       <Flex>
         <Box>
           <Heading marginBottom={6}>About me</Heading>

@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Heading,
-  Flex,
-  List,
-  ListItem,
-  Link,
-  Button,
-  Icon,
-} from '@chakra-ui/react';
+import { Box, Flex, Button, Icon, Center, Divider } from '@chakra-ui/react';
 import {
   IoLogoInstagram,
   IoLogoGithub,
@@ -19,36 +10,37 @@ import {
 import { motion } from 'framer-motion';
 
 export default function Contact() {
+  const iconSize = 60;
   const contactList = [
     {
       link: 'https://github.com/champjiwrd',
       label: '@champjiwrd',
-      icon: <Icon as={IoLogoGithub} />,
+      icon: <Icon size={iconSize} as={IoLogoGithub} />,
     },
     {
       link: 'https://www.linkedin.com/in/warodom-baiudom-484180205',
       label: '@warodom baiudom',
-      icon: <Icon as={IoLogoLinkedin} />,
+      icon: <Icon size={iconSize} as={IoLogoLinkedin} />,
     },
     {
       link: 'mailto:warodom.baiudom@gmail.com',
       label: 'mail',
-      icon: <Icon as={IoMail} />,
+      icon: <Icon size={iconSize} as={IoMail} />,
     },
     {
       link: 'https://facebook.com/champjiwrd',
       label: '@Champ Warodom',
-      icon: <Icon as={IoLogoFacebook} />,
+      icon: <Icon size={iconSize} as={IoLogoFacebook} />,
     },
     {
       link: 'https://instagram.com/champjiwrd',
       label: '@champjiwrd',
-      icon: <Icon as={IoLogoInstagram} />,
+      icon: <Icon size={iconSize} as={IoLogoInstagram} />,
     },
   ];
   return (
-    <Box marginTop={-5} marginBottom={10}>
-      <Flex>
+    <Box marginTop={40} marginBottom={10}>
+      {/* <Flex>
         <Box>
           <Heading marginBottom={6}>Contact</Heading>
           <List>
@@ -81,7 +73,38 @@ export default function Contact() {
             })}
           </List>
         </Box>
-      </Flex>
+      </Flex> */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.6 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0.5 },
+        }}
+      >
+        <Box alignContent={'center'}>
+          <Center>
+            <Divider />
+            <Flex>
+              {contactList.map(item => {
+                return (
+                  <Box>
+                    <Button variant="ghost" colorScheme="purple">
+                      {item.icon}
+                    </Button>
+                  </Box>
+                );
+              })}
+            </Flex>
+            <Divider />
+          </Center>
+        </Box>
+        <Box>
+          <Center>Warodom Baiudom</Center>
+        </Box>
+      </motion.div>
     </Box>
   );
 }

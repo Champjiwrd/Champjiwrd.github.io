@@ -28,7 +28,7 @@ export default function Skill() {
     { title: 'React.js', icon: <IoLogoReact size={iconSize} /> },
     { title: 'Next.js', icon: <SiNextdotjs size={iconSize} /> },
     { title: 'Node.js', icon: <DiNodejs size={iconSize} /> },
-    { title: '', icon: <DiDjango size={iconSize} /> },
+    { title: 'Django', icon: <DiDjango size={iconSize} /> },
     { title: 'cypress', icon: <TbBrandCypress size={iconSize} /> },
   ];
   let languageList = [];
@@ -74,7 +74,7 @@ export default function Skill() {
   });
 
   return (
-    <Box marginBottom={10}>
+    <Box mt={'90px'}>
       <Flex>
         <Box>
           <Heading marginBottom={6}>Technical skills</Heading>

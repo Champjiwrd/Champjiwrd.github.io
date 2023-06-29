@@ -7,7 +7,7 @@ import Metamedia from './projects/project_metamedia';
 export default function Projects() {
   //   const projects = [<Project1 key='graduate' />];
   return (
-    <Box marginBottom={10}>
+    <Box mt={'90px'}>
       <Flex>
         <Box>
           <Heading marginBottom={6}>Work Experiences</Heading>

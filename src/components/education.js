@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Heading,
-  UnorderedList,
-  ListItem,
-  Flex,
-} from '@chakra-ui/react';
+import { Box, Heading, UnorderedList, ListItem, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 export default function Education() {
@@ -25,7 +19,7 @@ export default function Education() {
     },
   ];
   return (
-    <Box marginBottom={10}>
+    <Box mt={'90px'}>
       <Flex>
         <Box>
           <Heading marginBottom={6}>Education</Heading>

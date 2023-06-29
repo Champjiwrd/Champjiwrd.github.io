@@ -28,7 +28,7 @@ export default function projectItem({ title, subtitle }) {
     >
       <Card direction={{ base: 'column', sm: 'row' }} overflow="hidden">
         <Box
-          bg="#A3F7BF"
+          bg="#D6BCFA"
           flexShrink={0}
           display="flex"
           alignItems="center"
@@ -53,7 +53,7 @@ export default function projectItem({ title, subtitle }) {
           </CardBody>
 
           <CardFooter>
-            <Button variant="solid" colorScheme="blue">
+            <Button variant="solid" colorScheme="purple">
               Detail
             </Button>
           </CardFooter>
