@@ -41,6 +41,7 @@
 
 // export default App;
 import React from 'react';
+import Name from './components/name';
 import Profile from './components/profile';
 import AboutMe from './components/about-me';
 import Education from './components/education';
@@ -49,8 +50,9 @@ import Contact from './components/contact';
 import Project from './components/project';
 import Skill from './components/skill';
 import { Container, ChakraProvider } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import theme from './theme';
+import './components/styles/app.css';
 // import { ColorModeSwitcher } from './ColorModeSwitcher';
 // import './components/styles/verticalTimeline.css';
 
@@ -60,26 +62,37 @@ export default function App() {
     enter: { opacity: 1, x: 0, y: 0 },
     exit: { opacity: 0, x: -0, y: 20 },
   };
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  console.log(scrollYProgress);
   return (
-    <ChakraProvider theme={theme}>
-      <motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ duration: 0.6, type: 'easeInOut' }}
-        style={{ position: 'relative' }}
-      >
-        <Container>
-          <Profile />
-          <AboutMe />
-          <Experiences />
-          <Project />
-          <Skill />
-          <Education />
-          <Contact />
-        </Container>
-      </motion.div>
-    </ChakraProvider>
+    <>
+      <motion.div className="progress-bar" style={{ scaleX }} />
+      <ChakraProvider theme={theme}>
+        <motion.div
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ duration: 0.6, type: 'easeInOut' }}
+          style={{ position: 'relative' }}
+        >
+          <Container>
+            <Name />
+            {/* <Profile /> */}
+            <AboutMe />
+            <Experiences />
+            <Project />
+            <Skill />
+            <Education />
+            <Contact />
+          </Container>
+        </motion.div>
+      </ChakraProvider>
+    </>
   );
 }
