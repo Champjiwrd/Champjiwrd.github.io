@@ -8,7 +8,7 @@ export default function Education() {
     {
       duration: '2017 - 2021',
       program: 'Computer Engineering',
-      school: 'King Mongkut&apos;s Institute Of Technology Ladkrabang',
+      school: "King Mongkut's Institute Of Technology Ladkrabang",
       gpa: '3.36',
     },
     {
