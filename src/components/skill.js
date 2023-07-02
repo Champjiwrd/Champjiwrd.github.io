@@ -20,7 +20,7 @@ export default function Skill() {
     { id: 2, title: 'CSS', icon: <DiCss3 size={iconSize} /> },
     { id: 3, title: 'JavaScript', icon: <DiJavascript size={iconSize} /> },
     { id: 4, title: 'Python', icon: <IoLogoPython size={iconSize} /> },
-    { id: 5, title: '', icon: <SiPhp size={iconSize} /> },
+    { id: 5, title: 'Php', icon: <SiPhp size={iconSize} /> },
   ];
   const framework = [
     { title: 'Vue.js', icon: <IoLogoVue size={iconSize} /> },
@@ -83,7 +83,7 @@ export default function Skill() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
               variants={{
                 visible: { opacity: 1, scale: 1 },
                 hidden: { opacity: 0, scale: 0.5 },
@@ -91,20 +91,19 @@ export default function Skill() {
             >
               <Wrap>{languageList}</Wrap>
             </motion.div>
+            <Heading size="md" marginY={6}>
+              Framework & Library
+            </Heading>
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
               variants={{
                 visible: { opacity: 1, scale: 1 },
                 hidden: { opacity: 0, scale: 0.5 },
               }}
             >
-              <Heading size="md" marginY={6}>
-                Framework & Library
-              </Heading>
-
               <Wrap>{framworkList}</Wrap>
             </motion.div>
           </Box>

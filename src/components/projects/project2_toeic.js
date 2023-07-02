@@ -109,13 +109,19 @@ export default function Project2() {
                 margin: 'auto',
               }}
             />
+            <Box marginTop={6}>
+              A website about vocabulary learning, with categorized word lists
+              and vocabulary quizzes. It provides tests for various vocabulary
+              categories and summarizes the words you answered correctly and
+              incorrectly.
+            </Box>
             <Heading marginTop={6} size="md">
               TECHNOLOGIES
             </Heading>
             <UnorderedList>
               <ListItem>Back-End: Django Python framework</ListItem>
-              <ListItem>Front-End: HTML, CSS, Javascript</ListItem>
-              <ListItem>Deploy on Herokuapp</ListItem>
+              <ListItem>Front-End: Vue.js</ListItem>
+              <ListItem>Web Server: NGINX</ListItem>
             </UnorderedList>
             <Heading marginTop={6} size="md">
               DEMO

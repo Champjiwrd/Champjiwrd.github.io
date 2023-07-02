@@ -52,12 +52,15 @@ export default function Project2() {
               TASK
             </Heading>
             <UnorderedList>
-              <ListItem>Front-End: HTML, CSS, Javascript, Vue.js</ListItem>
-              <ListItem>Back-End: Drupal (PHP)</ListItem>
-              <UnorderedList>
-                <ListItem>Front-End: HTML, CSS, Javascript, Vue.js</ListItem>
-                <ListItem>Back-End: Drupal (PHP)</ListItem>
-              </UnorderedList>
+              <ListItem>
+                <b>Front-End</b>: HTML, CSS, Javascript, Nuxt.js, Vue.js
+              </ListItem>
+              <ListItem>
+                <b>Back-End</b>: Drupal (PHP)
+              </ListItem>
+              <ListItem>Automate Testing: Cypress</ListItem>
+              <ListItem>Longdo Map</ListItem>
+              <ListItem>Line Developer</ListItem>
             </UnorderedList>
           </ModalBody>
           {/* <ModalFooter>

@@ -19,7 +19,7 @@ export default function projectItem({ title, subtitle }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       variants={{
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0.8 },

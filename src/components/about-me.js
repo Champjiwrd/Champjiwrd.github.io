@@ -1,12 +1,27 @@
 import React from 'react';
 import { Box, Heading, Flex } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 export default function AboutMe() {
   return (
     <Box mt={'90px'}>
       <Flex>
         <Box>
           <Heading marginBottom={6}>About me</Heading>
-          <p>I am a full-stack Developer</p>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
+            <Box>
+              <p>I am a Full-Stack Web Developer</p>
+            </Box>
+          </motion.div>
         </Box>
       </Flex>
     </Box>

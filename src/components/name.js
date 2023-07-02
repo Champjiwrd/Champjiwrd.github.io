@@ -2,7 +2,7 @@ import { Box, Heading } from '@chakra-ui/react';
 
 export default function name() {
   return (
-    <Box mt={'90px'}>
+    <Box my={300}>
       <Heading
         size={'3xl'}
         bgGradient="linear(to-l, yellow.500, purple.500 )"

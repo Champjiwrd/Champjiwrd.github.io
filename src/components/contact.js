@@ -51,7 +51,7 @@ export default function Contact() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.5 }}
                   variants={{
                     visible: { opacity: 1, scale: 1 },
                     hidden: { opacity: 0, scale: 0.5 },
@@ -74,37 +74,27 @@ export default function Contact() {
           </List>
         </Box>
       </Flex> */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        transition={{ duration: 0.6 }}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0.5 },
-        }}
-      >
-        <Box alignContent={'center'}>
-          <Center>
-            <Divider />
-            <Flex>
-              {contactList.map(item => {
-                return (
-                  <Box>
-                    <Button variant="ghost" colorScheme="purple">
-                      {item.icon}
-                    </Button>
-                  </Box>
-                );
-              })}
-            </Flex>
-            <Divider />
-          </Center>
-        </Box>
-        <Box>
-          <Center>Warodom Baiudom</Center>
-        </Box>
-      </motion.div>
+
+      <Box alignContent={'center'}>
+        <Center>
+          <Divider />
+          <Flex>
+            {contactList.map(item => {
+              return (
+                <Box>
+                  <Button variant="ghost" colorScheme="purple">
+                    {item.icon}
+                  </Button>
+                </Box>
+              );
+            })}
+          </Flex>
+          <Divider />
+        </Center>
+      </Box>
+      <Box>
+        <Center>Warodom Baiudom</Center>
+      </Box>
     </Box>
   );
 }
