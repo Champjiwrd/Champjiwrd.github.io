@@ -1,5 +1,13 @@
 import React from 'react';
-import { Box, Flex, Button, Icon, Center, Divider } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Button,
+  Icon,
+  Center,
+  Divider,
+  Link,
+} from '@chakra-ui/react';
 import {
   IoLogoInstagram,
   IoLogoGithub,
@@ -50,7 +58,7 @@ export default function Contact() {
                   key={index}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                   variants={{
                     visible: { opacity: 1, scale: 1 },
@@ -82,9 +90,11 @@ export default function Contact() {
             {contactList.map(item => {
               return (
                 <Box>
-                  <Button variant="ghost" colorScheme="purple">
-                    {item.icon}
-                  </Button>
+                  <Link href={item.link} target="_blank">
+                    <Button variant="ghost" colorScheme="purple">
+                      {item.icon}
+                    </Button>
+                  </Link>
                 </Box>
               );
             })}
