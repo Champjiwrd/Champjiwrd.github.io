@@ -11,6 +11,8 @@ import {
   Heading,
   UnorderedList,
   ListItem,
+  Text,
+  Flex,
 } from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
@@ -48,10 +50,29 @@ export default function Project2() {
           <ModalCloseButton />
           <ModalBody>
             {/* <Slider/> */}
-            <Heading marginTop={6} size="md">
+            <Box>
+              <Text as="span">
+                {subtitle} was the first company that I started working for
+                after graduating. I joined as a{' '}
+              </Text>
+              <Text
+                as="span"
+                bgGradient="linear(to-l, yellow.500, purple.500 )"
+                bgClip="text"
+                fontWeight="extrabold"
+              >
+                Junior Programmer
+              </Text>
+              <Text as="span">
+                {' '}
+                with responsibilities related to web development, specifically
+                both front-end and back-end tasks.
+              </Text>
+            </Box>
+            <Heading mt={12} size="md">
               TASK
             </Heading>
-            <UnorderedList>
+            <UnorderedList mt={3}>
               <ListItem>
                 <b>Front-End</b>: HTML, CSS, Javascript, Nuxt.js, Vue.js
               </ListItem>

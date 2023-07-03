@@ -48,16 +48,19 @@ export default function Project1() {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            System used for tracking a suspect person who has exactly what is
-            needed (such as shirt, bag, color) from CCTV.
-            <Heading marginTop={6} marginBottom={2} size="md">
+            <Heading size="md">OVERVIEW</Heading>
+            <Box mt={3}>
+              System used for tracking a suspect person who has exactly what is
+              needed (such as shirt, bag, color) from CCTV.
+            </Box>
+            <Heading mt={12} mb={3} size="md">
               Video Demo
             </Heading>
             <YoutubeEmbed embedId="HHnR7vX4W6Y" />
-            <Heading marginTop={6} size="md">
+            <Heading mt={12} size="md">
               TECHNOLOGIES
             </Heading>
-            <UnorderedList>
+            <UnorderedList mt={3}>
               <ListItem>YOLOv4 Object Detection</ListItem>
               <ListItem>Color classification</ListItem>
             </UnorderedList>

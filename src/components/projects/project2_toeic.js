@@ -109,27 +109,36 @@ export default function Project2() {
                 margin: 'auto',
               }}
             />
-            <Box marginTop={6}>
+            <Heading mt={12} size="md">
+              OVERVIEW
+            </Heading>
+            <Box mt={3}>
               A website about vocabulary learning, with categorized word lists
               and vocabulary quizzes. It provides tests for various vocabulary
               categories and summarizes the words you answered correctly and
               incorrectly.
             </Box>
-            <Heading marginTop={6} size="md">
+            <Heading mt={12} size="md">
               TECHNOLOGIES
             </Heading>
-            <UnorderedList>
-              <ListItem>Back-End: Django Python framework</ListItem>
-              <ListItem>Front-End: Vue.js</ListItem>
-              <ListItem>Web Server: NGINX</ListItem>
+            <UnorderedList mt={3}>
+              <ListItem>
+                <b>Front-End</b>: Vue.js, Vuetify
+              </ListItem>
+              <ListItem>
+                <b>Back-End</b>: Django Python framework
+              </ListItem>
+              <ListItem>
+                <b>Web Server</b>: NGINX
+              </ListItem>
             </UnorderedList>
-            <Heading marginTop={6} size="md">
+            <Heading mt={12} size="md">
               DEMO
             </Heading>
-            <Link href="https://voccoli.com/" target="_blank">
+            <Link mt={3} href="https://voccoli.com/" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                colorScheme="purple"
                 leftIcon={<Icon as={FaChrome} />}
               >
                 Visit Voccoli <Icon as={BiLinkAlt} />
