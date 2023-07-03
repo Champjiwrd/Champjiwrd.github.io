@@ -23,7 +23,7 @@ export default function Experiences() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           variants={{
             visible: { opacity: 1, scale: 1 },
@@ -38,7 +38,7 @@ export default function Experiences() {
                 key={index}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 variants={{
                   visible: { opacity: 1, scale: 1 },

@@ -29,7 +29,7 @@ export default function Education() {
                 key={index}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 variants={{
                   visible: { opacity: 1, scale: 1 },

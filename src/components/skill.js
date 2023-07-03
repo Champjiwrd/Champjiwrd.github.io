@@ -9,7 +9,7 @@ import {
   DiNodejs,
 } from 'react-icons/di';
 import { TbBrandCypress } from 'react-icons/tb';
-import { SiPhp, SiNextdotjs, SiNuxtdotjs } from 'react-icons/si';
+import { SiPhp, SiNextdotjs, SiNuxtdotjs, SiVuetify } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './styles/skill.css';
 
@@ -29,7 +29,8 @@ export default function Skill() {
     { title: 'Next.js', icon: <SiNextdotjs size={iconSize} /> },
     { title: 'Node.js', icon: <DiNodejs size={iconSize} /> },
     { title: 'Django', icon: <DiDjango size={iconSize} /> },
-    { title: 'cypress', icon: <TbBrandCypress size={iconSize} /> },
+    { title: 'Cypress', icon: <TbBrandCypress size={iconSize} /> },
+    { title: 'Vuetify', icon: <SiVuetify size={iconSize} /> },
   ];
   let languageList = [];
 
@@ -82,7 +83,7 @@ export default function Skill() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               variants={{
                 visible: { opacity: 1, scale: 1 },
@@ -97,7 +98,7 @@ export default function Skill() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               variants={{
                 visible: { opacity: 1, scale: 1 },
