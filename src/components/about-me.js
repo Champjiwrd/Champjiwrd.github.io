@@ -20,10 +20,10 @@ export default function AboutMe() {
           >
             <Box>
               <p>
-                I am a Full-Stack Web Developer with 2 years of experience in
-                web development. I am proficient in various programming
-                languages, frameworks, and technologies, including HTML, CSS,
-                JavaScript, Vue.js, Drupal, PHP, Python and others.
+                I'm a Full-Stack Web Developer with 2 years of experience in web
+                development. I am proficient in various programming languages,
+                frameworks, and technologies, including HTML, CSS, JavaScript,
+                Vue.js, Drupal, PHP, Python and others.
               </p>
             </Box>
           </motion.div>

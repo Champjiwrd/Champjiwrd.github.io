@@ -15,7 +15,6 @@ import {
   IoMail,
   IoLogoLinkedin,
 } from 'react-icons/io5';
-import { motion } from 'framer-motion';
 
 export default function Contact() {
   const iconSize = 60;

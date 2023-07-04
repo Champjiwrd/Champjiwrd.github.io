@@ -58,7 +58,6 @@ export default function Project2() {
     fontSize: '20px',
     fontWeight: 'bold',
   };
-  const modalSize = 'full'; // Check window width for responsiveness
   return (
     <div>
       <div onClick={onOpen}>
@@ -67,7 +66,7 @@ export default function Project2() {
 
       <Modal
         onClose={onClose}
-        size={modalSize}
+        size={{ base: 'full', lg: '4xl' }}
         isOpen={isOpen}
         scrollBehavior={'inside'}
         isCentered

@@ -14,7 +14,8 @@ import {
 } from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
-import YoutubeEmbed from '../YoutubeEmbed';
+import { Carousel } from 'react-carousel-minimal';
+import 'react-awesome-slider/dist/styles.css';
 
 export default function Project1() {
   const title = 'Individual and Object Detection from CCTV';
@@ -22,8 +23,12 @@ export default function Project1() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
-  const modalSize = 'full'; // Check window width for responsiveness
-
+  const data = [
+    {
+      image: '/projects/cctv.gif',
+      caption: '',
+    },
+  ];
   return (
     <div>
       <div onClick={onOpen}>
@@ -32,7 +37,7 @@ export default function Project1() {
 
       <Modal
         onClose={onClose}
-        size={modalSize}
+        size={{ base: 'full', lg: '4xl' }}
         isOpen={isOpen}
         scrollBehavior={'inside'}
         isCentered
@@ -54,9 +59,21 @@ export default function Project1() {
               needed (such as shirt, bag, color) from CCTV.
             </Box>
             <Heading mt={12} mb={3} size="md">
-              Video Demo
+              Result Demo
             </Heading>
-            <YoutubeEmbed embedId="HHnR7vX4W6Y" />
+            <Carousel
+              data={data}
+              time={3000}
+              width="850px"
+              height="500px"
+              radius="10px"
+              style={{
+                textAlign: 'center',
+                maxWidth: '850px',
+                maxHeight: '500px',
+                margin: 'auto',
+              }}
+            />
             <Heading mt={12} size="md">
               TECHNOLOGIES
             </Heading>

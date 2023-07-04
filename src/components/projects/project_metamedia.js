@@ -12,7 +12,6 @@ import {
   UnorderedList,
   ListItem,
   Text,
-  Flex,
 } from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
@@ -24,7 +23,6 @@ export default function Project2() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
-  const modalSize = 'full'; // Check window width for responsiveness
   return (
     <div>
       <div onClick={onOpen}>
@@ -33,7 +31,7 @@ export default function Project2() {
 
       <Modal
         onClose={onClose}
-        size={modalSize}
+        size={{ base: 'full', lg: '4xl' }}
         isOpen={isOpen}
         scrollBehavior={'inside'}
         isCentered
@@ -70,7 +68,7 @@ export default function Project2() {
               </Text>
             </Box>
             <Heading mt={12} size="md">
-              TASK
+              TOOLS
             </Heading>
             <UnorderedList mt={3}>
               <ListItem>

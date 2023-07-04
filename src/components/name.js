@@ -1,5 +1,5 @@
 import { Box, Heading } from '@chakra-ui/react';
-
+import Typewriter from 'typewriter-effect';
 export default function name() {
   return (
     <Box my={300}>
@@ -12,7 +12,19 @@ export default function name() {
       >
         Warodom Baiudom
       </Heading>
-      <Heading size={'2xl'}>Champ</Heading>
+      <Heading size={'xl'}>
+        <Typewriter
+          loop={true}
+          onInit={typewriter => {
+            typewriter
+              .typeString('Hello!')
+              .pauseFor(1000)
+              .deleteAll()
+              .typeString("I'm Champ")
+              .start();
+          }}
+        />
+      </Heading>
     </Box>
   );
 }
