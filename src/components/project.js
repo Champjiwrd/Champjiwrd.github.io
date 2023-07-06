@@ -10,7 +10,7 @@ export default function Projects() {
     <Box mt={'90px'}>
       <Flex>
         <Box>
-          <Heading marginBottom={6}>Work Experiences</Heading>
+          <Heading marginBottom={6}>My Works</Heading>
           {/* <Box>{projects}</Box> */}
           <Metamedia key="metamedia" />
           <Project2 key="toeic" />

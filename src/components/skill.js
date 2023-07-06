@@ -78,7 +78,7 @@ export default function Skill() {
     <Box mt={'90px'}>
       <Flex>
         <Box>
-          <Heading marginBottom={6}>Technical skills</Heading>
+          <Heading marginBottom={6}>Technical Skills</Heading>
           <Box>
             <motion.div
               initial="hidden"

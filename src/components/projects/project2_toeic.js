@@ -14,6 +14,7 @@ import {
   ListItem,
   Link,
   Icon,
+  Center,
 } from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
@@ -30,34 +31,35 @@ export default function Project2() {
 
   const data = [
     {
-      image: '/project2/image1.png',
+      image: '/project2/image1.jpg',
       caption: '',
     },
     {
-      image: '/project2/image2.png',
+      image: '/project2/image2.jpg',
       caption: '',
     },
     {
-      image: '/project2/image3.png',
+      image: '/project2/image3.jpg',
       caption: '',
     },
     {
-      image: '/project2/image4.png',
+      image: '/project2/image4.jpg',
       caption: '',
     },
     {
-      image: '/project2/image5.png',
+      image: '/project2/image5.jpg',
+      caption: '',
+    },
+    {
+      image: '/project2/image6.jpg',
+      caption: '',
+    },
+    {
+      image: '/project2/image7.jpg',
       caption: '',
     },
   ];
-  const captionStyle = {
-    fontSize: '2em',
-    fontWeight: 'bold',
-  };
-  const slideNumberStyle = {
-    fontSize: '20px',
-    fontWeight: 'bold',
-  };
+
   return (
     <div>
       <div onClick={onOpen}>
@@ -83,31 +85,26 @@ export default function Project2() {
           <ModalCloseButton />
           <ModalBody>
             {/* <Slider/> */}
-            <Carousel
-              data={data}
-              time={3000}
-              width="850px"
-              height="500px"
-              captionStyle={captionStyle}
-              radius="10px"
-              slideNumber={true}
-              slideNumberStyle={slideNumberStyle}
-              captionPosition="bottom"
-              automatic={true}
-              dots={true}
-              pauseIconColor="white"
-              pauseIconSize="40px"
-              slideBackgroundColor="darkgrey"
-              slideImageFit="cover"
-              thumbnails={false}
-              thumbnailWidth="100px"
-              style={{
-                textAlign: 'center',
-                maxWidth: '850px',
-                maxHeight: '500px',
-                margin: 'auto',
-              }}
-            />
+            {/* <Image
+              borderRadius={10}
+              boxSize={'full'}
+              width={300}
+              src="/project2/image1.jpg"
+            /> */}
+            <Center>
+              <Carousel
+                data={data}
+                time={3000}
+                height={'500px'}
+                radius="10px"
+                automatic={true}
+                dots={true}
+                boxSize={'full'}
+                slideBackgroundColor="transparent"
+                slideImageFit={'contain'}
+              />
+            </Center>
+
             <Heading mt={12} size="md">
               OVERVIEW
             </Heading>

@@ -42,7 +42,7 @@
 // export default App;
 import React from 'react';
 import Name from './components/name';
-import Profile from './components/profile';
+// import Profile from './components/profile';
 import AboutMe from './components/about-me';
 import Education from './components/education';
 import Experiences from './components/experiences';
@@ -71,7 +71,6 @@ export default function App() {
   console.log(scrollYProgress);
   return (
     <>
-      <motion.div className="progress-bar" style={{ scaleX }} />
       <ChakraProvider theme={theme}>
         <motion.div
           initial="hidden"
@@ -82,6 +81,7 @@ export default function App() {
           style={{ position: 'relative' }}
         >
           <Container>
+            <motion.div className="progress-bar" style={{ scaleX }} />
             <Name />
             {/* <Profile /> */}
             <AboutMe />

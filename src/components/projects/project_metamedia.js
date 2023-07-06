@@ -11,7 +11,9 @@ import {
   Heading,
   UnorderedList,
   ListItem,
+  Button,
   Text,
+  Link,
 } from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
@@ -78,9 +80,27 @@ export default function Project2() {
                 <b>Back-End</b>: Drupal (PHP)
               </ListItem>
               <ListItem>Automate Testing: Cypress</ListItem>
-              <ListItem>Longdo Map</ListItem>
+              <ListItem>
+                <Link href="https://map.longdo.com/main/" target="_blank">
+                  Longdo Map
+                </Link>
+              </ListItem>
               <ListItem>Line Developer</ListItem>
             </UnorderedList>
+            <Heading mt={12} size="md">
+              WORKING PERIOD
+            </Heading>
+            <Box mt={3}>Jun 2020 - Present </Box>
+            <Heading mt={12} size="md">
+              COMPANY
+            </Heading>
+            <Box mt={3}>
+              <Link href="https://www.mm.co.th/" target="_blank">
+                <Button colorScheme="purple" variant="outline">
+                  {subtitle}
+                </Button>
+              </Link>
+            </Box>
           </ModalBody>
           {/* <ModalFooter>
             <Button onClick={onClose}>Close</Button>
