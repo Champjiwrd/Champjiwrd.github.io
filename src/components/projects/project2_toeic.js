@@ -115,7 +115,7 @@ export default function Project2() {
               incorrectly.
             </Box>
             <Heading mt={12} size="md">
-              TECHNOLOGIES
+              TOOLS
             </Heading>
             <UnorderedList mt={3}>
               <ListItem>
@@ -131,15 +131,17 @@ export default function Project2() {
             <Heading mt={12} size="md">
               DEMO
             </Heading>
-            <Link mt={3} href="https://voccoli.com/" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="purple"
-                leftIcon={<Icon as={FaChrome} />}
-              >
-                Visit Voccoli <Icon as={BiLinkAlt} />
-              </Button>
-            </Link>
+            <Box mt={3}>
+              <Link href="https://voccoli.com/" target="_blank">
+                <Button
+                  variant="outline"
+                  colorScheme="purple"
+                  leftIcon={<Icon as={FaChrome} />}
+                >
+                  Visit Voccoli <Icon as={BiLinkAlt} />
+                </Button>
+              </Link>
+            </Box>
           </ModalBody>
           {/* <ModalFooter>
             <Button onClick={onClose}>Close</Button>
