@@ -18,6 +18,7 @@ import {
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
 import 'react-awesome-slider/dist/styles.css';
+import { longdo, map, LongdoMap } from './../../longdo-map/LongdoMap';
 
 export default function Project2() {
   const title = 'Junior Developer';
@@ -25,9 +26,26 @@ export default function Project2() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
+  const mapKey = '35b680dbb0b0ed5a6957e0a858ed48f0';
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  };
+  const showPosition = position => {
+    const currentPosition = {
+      lon: position.coords.longitude,
+      lat: position.coords.latitude,
+    };
+    var marker = new longdo.Marker(currentPosition);
+    map.Overlays.add(marker);
+    map.location(currentPosition);
+    map.zoom(16);
+  };
+
   return (
     <div>
-      <div onClick={onOpen}>
+      <div className="card-container" onClick={onOpen}>
         <ProjectItem title={title} subtitle={subtitle} />
       </div>
 
@@ -53,7 +71,7 @@ export default function Project2() {
             <Box>
               <Text as="span">
                 {subtitle} was the first company that I started working for
-                after graduating. I joined as a{' '}
+                {/* after graduating. I joined as a{' '} */}
               </Text>
               <Text
                 as="span"
@@ -67,6 +85,32 @@ export default function Project2() {
                 {' '}
                 with responsibilities related to web development, specifically
                 both front-end and back-end tasks.
+              </Text>
+            </Box>
+            <Box borderRadius={20} mt={12} h="500px">
+              <LongdoMap
+                id="longdo-map"
+                mapKey={mapKey}
+                callback={getLocation}
+              />
+            </Box>
+            <Box mt={12}>
+              <Text>
+                I have been assigned to plot positions or create something in
+                Longdo Map
+                <Text
+                  as="span"
+                  className="text-detail"
+                  color="RGBA(255, 255, 255, 0.48)"
+                >
+                  {' '}
+                  (an online mapping service that provides detailed maps and
+                  navigation information for various locations in Thailand){' '}
+                </Text>
+                according to the customer's requirements, and develop the
+                front-end program using Vue.js to align with the user interface.
+                Additionally, I will write an API to store and retrieve data
+                from the database.
               </Text>
             </Box>
             <Heading mt={12} size="md">

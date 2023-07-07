@@ -24,9 +24,13 @@ export default function projectItem({ title, subtitle }) {
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0.8 },
       }}
-      className="card-project"
+      className="card-container"
     >
-      <Card direction={{ base: 'column', sm: 'row' }} overflow="hidden">
+      <Card
+        className="card-project"
+        direction={{ base: 'column', sm: 'row' }}
+        overflow="hidden"
+      >
         <Box
           bg="#D6BCFA"
           flexShrink={0}

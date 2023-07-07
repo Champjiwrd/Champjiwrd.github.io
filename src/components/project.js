@@ -8,14 +8,14 @@ export default function Projects() {
   //   const projects = [<Project1 key='graduate' />];
   return (
     <Box mt={'90px'}>
+      <Heading marginBottom={6}>My Works</Heading>
+      <Box className="project-list">
+        <Metamedia key="metamedia" />
+        <Project2 key="toeic" />
+        <Project1 key="graduate" />
+      </Box>
       <Flex>
-        <Box>
-          <Heading marginBottom={6}>My Works</Heading>
-          {/* <Box>{projects}</Box> */}
-          <Metamedia key="metamedia" />
-          <Project2 key="toeic" />
-          <Project1 key="graduate" />
-        </Box>
+        <Box>{/* <Box>{projects}</Box> */}</Box>
       </Flex>
     </Box>
   );

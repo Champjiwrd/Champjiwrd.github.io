@@ -17,14 +17,6 @@
   margin-bottom: 20px;
   background: rgb(162, 162, 162);
 }
-
-
-.card-project:hover{
-    cursor: pointer;
-    box-shadow:inset 0px 0px 0px 2px white;
-    border-radius: 8px;
-}
-
   
   .video-responsive {
     overflow: hidden;

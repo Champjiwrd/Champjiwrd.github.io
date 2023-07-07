@@ -40,7 +40,7 @@
 // }
 
 // export default App;
-import React from 'react';
+import React, { Component } from 'react';
 import Name from './components/name';
 // import Profile from './components/profile';
 import AboutMe from './components/about-me';
