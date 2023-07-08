@@ -18,9 +18,13 @@
 .text-detail{
   color: gray;
 }
-  .longdo-map *,.ldmap_contextmenu_info,.ldmap_tooltip {
-    color: black;
-  }
+.longdo-map *,.ldmap_contextmenu_info,.ldmap_tooltip {
+  color: black;
+}
+.map-container {
+  height: 100%;
+  border-radius: 50px !important;
+}
 @media only screen and (max-width: 480px) {
   div.project-list {
     display: flex;

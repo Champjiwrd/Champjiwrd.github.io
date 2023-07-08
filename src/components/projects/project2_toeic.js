@@ -15,6 +15,8 @@ import {
   Link,
   Icon,
   Center,
+  Divider,
+  Tag,
 } from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
@@ -22,6 +24,7 @@ import { FaChrome } from 'react-icons/fa';
 import { BiLinkAlt } from 'react-icons/bi';
 import 'react-awesome-slider/dist/styles.css';
 import { Carousel } from 'react-carousel-minimal';
+import { RiComputerLine } from 'react-icons/ri';
 
 export default function Project2() {
   const title = 'Voccoli Project';
@@ -109,10 +112,10 @@ export default function Project2() {
               OVERVIEW
             </Heading>
             <Box mt={3}>
-              A website about vocabulary learning, with categorized word lists
-              and vocabulary quizzes. It provides tests for various vocabulary
-              categories and summarizes the words you answered correctly and
-              incorrectly.
+              This website is my personal website, created for the purpose of
+              vocabulary learning, with categorized word lists and vocabulary
+              quizzes. It provides tests for various vocabulary categories and
+              summarizes the words you answered correctly and incorrectly.
             </Box>
             <Heading mt={12} size="md">
               TOOLS
@@ -129,7 +132,10 @@ export default function Project2() {
               </ListItem>
             </UnorderedList>
             <Heading mt={12} size="md">
-              DEMO
+              DEMO{' '}
+              <Tag size={'sm'} variant="solid" colorScheme="green">
+                Developing
+              </Tag>
             </Heading>
             <Box mt={3}>
               <Link href="https://voccoli.com/" target="_blank">
@@ -142,6 +148,11 @@ export default function Project2() {
                 </Button>
               </Link>
             </Box>
+            <Center mt={12}>
+              <Divider mr={5} />
+              <RiComputerLine size={50} />
+              <Divider ml={5} />
+            </Center>
           </ModalBody>
           {/* <ModalFooter>
             <Button onClick={onClose}>Close</Button>

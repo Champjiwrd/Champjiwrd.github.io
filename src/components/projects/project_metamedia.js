@@ -7,6 +7,7 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
+  Divider,
   useDisclosure,
   Heading,
   UnorderedList,
@@ -14,12 +15,15 @@ import {
   Button,
   Text,
   Link,
+  Flex,
+  Center,
 } from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
 import 'react-awesome-slider/dist/styles.css';
 import { longdo, map, LongdoMap } from './../../longdo-map/LongdoMap';
-
+import { RiComputerLine } from 'react-icons/ri';
+import { PiDotOutlineLight } from 'react-icons/pi';
 export default function Project2() {
   const title = 'Junior Developer';
   const subtitle = 'Metamedia Technology Co., Ltd.';
@@ -74,6 +78,16 @@ export default function Project2() {
     map.location(currentPosition);
     map.zoom(16);
   };
+  const calculateDateDifference = (date1, date2) => {
+    var diffMonths =
+      date2.getMonth() -
+      date1.getMonth() +
+      12 * (date2.getFullYear() - date1.getFullYear());
+    var years = Math.floor(diffMonths / 12);
+    var months = diffMonths % 12;
+
+    return `( ${years} years ${months} months )`;
+  };
 
   return (
     <div>
@@ -120,11 +134,14 @@ export default function Project2() {
               </Text>
             </Box>
             <Box borderRadius={20} mt={12} h="500px">
-              <LongdoMap
-                id="longdo-map"
-                mapKey={mapKey}
-                callback={getLocation}
-              />
+              <div className="map-container">
+                <LongdoMap
+                  id="longdo-map"
+                  className="map-container"
+                  mapKey={mapKey}
+                  callback={getLocation}
+                />
+              </div>
             </Box>
             <Box mt={12}>
               <Text>
@@ -166,7 +183,15 @@ export default function Project2() {
             <Heading mt={12} size="md">
               WORKING PERIOD
             </Heading>
-            <Box mt={3}>Jun 2020 - Present </Box>
+            <Flex mt={3}>
+              <Center>
+                <Box>Jun 2020 - Present</Box>
+                <PiDotOutlineLight />
+                <Box color="RGBA(255, 255, 255, 0.48)">
+                  {calculateDateDifference(new Date('2021-06-16'), new Date())}
+                </Box>
+              </Center>
+            </Flex>
             <Heading mt={12} size="md">
               COMPANY
             </Heading>
@@ -177,10 +202,15 @@ export default function Project2() {
                 </Button>
               </Link>
             </Box>
+            <Center mt={12}>
+              <Divider mr={5} />
+              <RiComputerLine size={50} />
+              <Divider ml={5} />
+            </Center>
           </ModalBody>
-          {/* <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
-          </ModalFooter> */}
+          {/* <Box px={6}>
+            <Divider mt={12} mb={6} />
+          </Box> */}
         </ModalContent>
       </Modal>
     </div>
