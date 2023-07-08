@@ -28,9 +28,41 @@ export default function Project2() {
 
   const mapKey = '35b680dbb0b0ed5a6957e0a858ed48f0';
   const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    }
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(showPosition);
+    // }
+
+    const province = new longdo.Overlays.Object('10', 'IG', {
+      simplify: '0.0008',
+      lineWidth: 4,
+      lineColor: 'rgb(131,94,203)',
+      fillColor: 'rgba(214,188,250, 0.5)',
+      clickable: false,
+      weight: 1,
+      title: 'Bangkok',
+      detail: '',
+      label: '',
+      pointer: true,
+      labelOptions: {
+        style: 'color:black',
+      },
+    });
+    map.Overlays.load(province);
+    map.zoom(10);
+    map.location({ lat: 13.747371, lon: 100.609195 });
+    // var polygonList = map.Overlays.list();
+    // var locationList = [];
+    // polygonList.forEach(polygon => {
+    //   if (polygon.data) {
+    //     polygon.data.data.forEach(item => {
+    //       locationList = locationList.concat(item);
+    //     });
+    //   }
+    // });
+    // if (locationList.length > 0) {
+    //   var boundingBox = window.longdo.Util.locationBound(locationList);
+    //   map.bound(boundingBox);
+    // }
   };
   const showPosition = position => {
     const currentPosition = {
