@@ -13,7 +13,7 @@ export default function Experiences() {
     },
     {
       duration: '2020',
-      position: 'Back-End Developer Internship',
+      position: 'Web Developer Internship',
       company: 'Unixdev Co., Ltd',
     },
   ];

@@ -24,7 +24,7 @@ import { RiComputerLine } from 'react-icons/ri';
 import { PiDotOutlineLight } from 'react-icons/pi';
 
 export default function Project2() {
-  const title = 'Web Developer, Internship';
+  const title = 'Web Developer Internship';
   const subtitle = 'UnixDev Co.,Ltd';
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
