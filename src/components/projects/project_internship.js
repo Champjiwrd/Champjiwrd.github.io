@@ -29,17 +29,6 @@ export default function Project2() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
-  const modalSize = 'full'; // Check window width for responsiveness
-  const calculateDateDifference = (date1, date2) => {
-    var diffMonths =
-      date2.getMonth() -
-      date1.getMonth() +
-      12 * (date2.getFullYear() - date1.getFullYear());
-    var years = Math.floor(diffMonths / 12);
-    var months = diffMonths % 12;
-
-    return `( ${years} years ${months} months )`;
-  };
   return (
     <div>
       <div onClick={onOpen}>
@@ -48,7 +37,7 @@ export default function Project2() {
 
       <Modal
         onClose={onClose}
-        size={modalSize}
+        size={{ base: 'full', lg: '4xl' }}
         isOpen={isOpen}
         scrollBehavior={'inside'}
         isCentered
@@ -65,6 +54,13 @@ export default function Project2() {
           <ModalCloseButton />
           <ModalBody>
             {/* <Slider/> */}
+            <Box>
+              I have had the opportunity to intern as a web developer internship
+              position. My responsibilities included working on various projects
+              within the company, specifically modifying and adjusting different
+              functions according to client requirements. The main framework I
+              used for this was Django.
+            </Box>
             <Heading marginTop={6} size="md">
               TOOLS
             </Heading>
