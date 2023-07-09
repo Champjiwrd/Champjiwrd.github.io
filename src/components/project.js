@@ -3,6 +3,7 @@ import { Box, Heading, Flex } from '@chakra-ui/react';
 import Project1 from './projects/project1_graduate';
 import Project2 from './projects/project2_toeic';
 import Metamedia from './projects/project_metamedia';
+import Internship from './projects/project_internship';
 // import Project3 from "./projects/project3_vue";
 export default function Projects() {
   //   const projects = [<Project1 key='graduate' />];
@@ -13,6 +14,7 @@ export default function Projects() {
         <Metamedia key="metamedia" />
         <Project2 key="toeic" />
         <Project1 key="graduate" />
+        <Internship key="internship" />
       </Box>
       <Flex>
         <Box>{/* <Box>{projects}</Box> */}</Box>

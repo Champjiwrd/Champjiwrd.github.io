@@ -87,7 +87,7 @@ export default function Project1() {
             </Heading>
             <UnorderedList mt={3}>
               <ListItem>YOLOv4 Object Detection</ListItem>
-              <ListItem>Color classification</ListItem>
+              <ListItem>Color Classification</ListItem>
             </UnorderedList>
             <Center mt={12}>
               <Divider mr={5} />

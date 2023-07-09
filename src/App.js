@@ -85,10 +85,10 @@ export default function App() {
             <Name />
             {/* <Profile /> */}
             <AboutMe />
+            <Education />
             <Experiences />
             <Project />
             <Skill />
-            <Education />
             <Contact />
           </Container>
         </motion.div>
