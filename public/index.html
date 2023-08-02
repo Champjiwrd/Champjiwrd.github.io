@@ -9,6 +9,9 @@
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/Mushroom.png" />
   <script src="https://api.longdo.com/map/?key=35b680dbb0b0ed5a6957e0a858ed48f0"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,6 +30,13 @@
   <style>
     body {
       background: #1A202C;
+      /* font-family: 'Kanit', sans-serif !important; */
+    }
+
+    .view-count {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   </style>
 </head>
@@ -34,6 +44,7 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <!-- <div class="view-count">This site has been visited <span id="visits"></span> times.</div> -->
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

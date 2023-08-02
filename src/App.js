@@ -49,12 +49,14 @@ import Experiences from './components/experiences';
 import Contact from './components/contact';
 import Project from './components/project';
 import Skill from './components/skill';
-import { Container, ChakraProvider } from '@chakra-ui/react';
+import { Container, ChakraProvider, Grid, IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, ModalHeader, Image } from '@chakra-ui/react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import theme from './theme';
 import './components/styles/app.css';
 // import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { BsQrCodeScan } from 'react-icons/bs'
 // import './components/styles/verticalTimeline.css';
+import qrcode from './qr-code.svg'
 
 export default function App() {
   const variants = {
@@ -68,10 +70,30 @@ export default function App() {
     damping: 30,
     restDelta: 0.001,
   });
-  console.log(scrollYProgress);
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
       <ChakraProvider theme={theme}>
+        <Grid className='qrcode-bar'>
+          <IconButton variant="ghost" justifySelf="flex-end" onClick={onOpen}>
+            <BsQrCodeScan />
+          </IconButton>
+        </Grid>
+        <Modal onClose={onClose} isOpen={isOpen} isCentered>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>
+              Champjiwrd.github.io
+            </ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Image src={qrcode} fallbackSrc='https://via.placeholder.com/150' />
+            </ModalBody>
+            {/* <ModalFooter>
+              <Button onClick={onClose}>Close</Button>
+            </ModalFooter> */}
+          </ModalContent>
+        </Modal>
         <motion.div
           initial="hidden"
           animate="enter"

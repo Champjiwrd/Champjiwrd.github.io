@@ -7,9 +7,11 @@ import {
   DiCss3,
   DiJavascript,
   DiNodejs,
+  DiDrupal,
+  DiBootstrap
 } from 'react-icons/di';
 import { TbBrandCypress } from 'react-icons/tb';
-import { SiPhp, SiNextdotjs, SiNuxtdotjs, SiVuetify } from 'react-icons/si';
+import { SiPhp, SiNextdotjs, SiNuxtdotjs, SiVuetify, SiChakraui } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './styles/skill.css';
 
@@ -29,8 +31,11 @@ export default function Skill() {
     { title: 'Next.js', icon: <SiNextdotjs size={iconSize} /> },
     { title: 'Node.js', icon: <DiNodejs size={iconSize} /> },
     { title: 'Django', icon: <DiDjango size={iconSize} /> },
+    { title: 'Drupal', icon: <DiDrupal size={iconSize} /> },
     { title: 'Cypress', icon: <TbBrandCypress size={iconSize} /> },
     { title: 'Vuetify', icon: <SiVuetify size={iconSize} /> },
+    { title: 'Bootstrap', icon: <DiBootstrap size={iconSize} /> },
+    { title: 'Chakraui', icon: <SiChakraui size={iconSize} /> },
   ];
   let languageList = [];
 

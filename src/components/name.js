@@ -18,7 +18,7 @@ export default function name() {
           loop={true}
           onInit={typewriter => {
             typewriter
-              .typeString('Hello, world!')
+              .typeString('Hello, World!')
               .pauseFor(1000)
               .deleteAll()
               .typeString("I'm Champ")

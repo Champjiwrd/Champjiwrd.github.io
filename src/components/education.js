@@ -10,12 +10,12 @@ export default function Education() {
       program: 'Computer Engineering',
       school: "King Mongkut's Institute Of Technology Ladkrabang",
       gpa: '3.36',
+      detail: '(Second Class Honors)',
     },
     {
       duration: '2004 - 2016',
       program: 'Science and Mathematics Program',
       school: 'Bangkok Christian College',
-      gpa: '3.50',
     },
   ];
   return (
@@ -58,6 +58,7 @@ export default function Education() {
                     <UnorderedList>
                       <ListItem>{item.school}</ListItem>
                     </UnorderedList>
+                    <Box color="RGBA(255, 255, 255, 0.48)">{item.detail}</Box>
                   </Box>
                 </Flex>
               </motion.div>

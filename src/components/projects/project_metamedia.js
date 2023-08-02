@@ -185,7 +185,7 @@ export default function Project2() {
             </Heading>
             <Flex mt={3}>
               <Center>
-                <Box>Jun 2020 - Present</Box>
+                <Box>Jun 2021 - Present</Box>
                 <PiDotOutlineLight />
                 <Box color="RGBA(255, 255, 255, 0.48)">
                   {calculateDateDifference(new Date('2021-06-16'), new Date())}

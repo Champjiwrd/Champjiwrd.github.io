@@ -61,10 +61,10 @@ export default function Project2() {
               functions according to client requirements. The main framework I
               used for this was Django.
             </Box>
-            <Heading marginTop={6} size="md">
+            <Heading marginTop={12} size="md">
               TOOLS
             </Heading>
-            <UnorderedList>
+            <UnorderedList mt={3}>
               <ListItem>
                 Front-End: HTML, CSS, Javascript, Django Template
               </ListItem>
