@@ -87,7 +87,7 @@ export default function App() {
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              <Image src={qrcode} fallbackSrc='https://via.placeholder.com/150' />
+              <Image src={qrcode} />
             </ModalBody>
             {/* <ModalFooter>
               <Button onClick={onClose}>Close</Button>
