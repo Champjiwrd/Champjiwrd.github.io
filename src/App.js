@@ -49,7 +49,7 @@ import Experiences from './components/experiences';
 import Contact from './components/contact';
 import Project from './components/project';
 import Skill from './components/skill';
-import { Container, ChakraProvider, Grid, IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, ModalHeader, Image } from '@chakra-ui/react';
+import { Container, ChakraProvider, Grid, IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, ModalHeader, Image, Flex } from '@chakra-ui/react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import theme from './theme';
 import './components/styles/app.css';
@@ -83,11 +83,14 @@ export default function App() {
           <ModalOverlay />
           <ModalContent>
             <ModalHeader>
-              Champjiwrd.github.io
+              Visit My Portfolio
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Image src={qrcode} />
+              <Flex align="center" justify="center">
+                Champjiwrd.github.io
+              </Flex>
             </ModalBody>
             {/* <ModalFooter>
               <Button onClick={onClose}>Close</Button>
