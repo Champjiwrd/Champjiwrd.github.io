@@ -20,7 +20,7 @@ export default function AboutMe() {
           >
             <Box>
               <p>
-                I'm a Full-Stack Developer with 2 years of experience in web
+                I'm a Full-Stack Developer with 3 years of experience in web
                 development. I am proficient in various programming languages,
                 frameworks, and technologies, including HTML, CSS, JavaScript,
                 Vue.js, Drupal, PHP, Python and others.

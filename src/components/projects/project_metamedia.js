@@ -21,7 +21,7 @@ import {
 // import ProjectItem from "../projectItem";
 import ProjectItem from '../projectItem';
 import 'react-awesome-slider/dist/styles.css';
-import { longdo, map, LongdoMap } from './../../longdo-map/LongdoMap';
+// import { longdo, map, LongdoMap } from './../../longdo-map/LongdoMap';
 import { RiComputerLine } from 'react-icons/ri';
 import { PiDotOutlineLight } from 'react-icons/pi';
 export default function Project2() {
@@ -30,13 +30,27 @@ export default function Project2() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
-  const mapKey = '35b680dbb0b0ed5a6957e0a858ed48f0';
+  let map;
+  const initMap = () => {
+    map = new window.longdo.Map({
+      placeholder: document.getElementById('map'),
+      src: 'https://api.longdo.com/map3/',
+    });
+    map.Ui.Zoombar.visible(false);
+    map.Ui.DPad.visible(false);
+    map.Ui.Geolocation.visible(false);
+    map.Ui.Terrain.visible(false);
+    map.Ui.LayerSelector.visible(false);
+    map.Ui.Scale.visible(false);
+    if (map.Ui.Fullscreen) map.Ui.Fullscreen.visible(false);
+  };
+
   const getLocation = () => {
     // if (navigator.geolocation) {
     //   navigator.geolocation.getCurrentPosition(showPosition);
     // }
 
-    const province = new longdo.Overlays.Object('10', 'IG', {
+    const province = new window.longdo.Overlays.Object('10', 'IG', {
       simplify: '0.0008',
       lineWidth: 4,
       lineColor: 'rgb(131,94,203)',
@@ -73,7 +87,7 @@ export default function Project2() {
       lon: position.coords.longitude,
       lat: position.coords.latitude,
     };
-    var marker = new longdo.Marker(currentPosition);
+    var marker = new window.longdo.Marker(currentPosition);
     map.Overlays.add(marker);
     map.location(currentPosition);
     map.zoom(16);
@@ -89,9 +103,18 @@ export default function Project2() {
     return `( ${years} years ${months} months )`;
   };
 
+  const openModal = () => {
+    onOpen();
+    if (!map) {
+      setTimeout(() => {
+        initMap();
+      }, 100);
+    }
+  };
+
   return (
     <div>
-      <div className="card-container" onClick={onOpen}>
+      <div className="card-container" onClick={openModal}>
         <ProjectItem title={title} subtitle={subtitle} />
       </div>
 
@@ -135,12 +158,7 @@ export default function Project2() {
             </Box>
             <Box borderRadius={20} mt={12} h="500px">
               <div className="map-container">
-                <LongdoMap
-                  id="longdo-map"
-                  className="map-container"
-                  mapKey={mapKey}
-                  callback={getLocation}
-                />
+                <div id="map" style={{ width: '100%', height: '100%' }}></div>
               </div>
             </Box>
             <Box mt={12}>

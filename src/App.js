@@ -49,14 +49,28 @@ import Experiences from './components/experiences';
 import Contact from './components/contact';
 import Project from './components/project';
 import Skill from './components/skill';
-import { Container, ChakraProvider, Grid, IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, ModalHeader, Image, Flex } from '@chakra-ui/react';
+import {
+  Container,
+  ChakraProvider,
+  Grid,
+  IconButton,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  ModalHeader,
+  Image,
+  Flex,
+} from '@chakra-ui/react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import theme from './theme';
 import './components/styles/app.css';
-// import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { BsQrCodeScan } from 'react-icons/bs'
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { BsQrCodeScan } from 'react-icons/bs';
 // import './components/styles/verticalTimeline.css';
-import qrcode from './qr-code.svg'
+import qrcode from './qr-code.svg';
 
 export default function App() {
   const variants = {
@@ -70,11 +84,11 @@ export default function App() {
     damping: 30,
     restDelta: 0.001,
   });
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <ChakraProvider theme={theme}>
-        <Grid className='qrcode-bar'>
+        <Grid className="qrcode-bar">
           <IconButton variant="ghost" justifySelf="flex-end" onClick={onOpen}>
             <BsQrCodeScan />
           </IconButton>
@@ -82,9 +96,7 @@ export default function App() {
         <Modal onClose={onClose} isOpen={isOpen} isCentered>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>
-              Visit My Portfolio
-            </ModalHeader>
+            <ModalHeader>Visit My Portfolio</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Image src={qrcode} />
@@ -105,9 +117,22 @@ export default function App() {
           transition={{ duration: 0.6, type: 'easeInOut' }}
           style={{ position: 'relative' }}
         >
-          <Container>
+          <Container className="area">
+            <ul className="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
             <motion.div className="progress-bar" style={{ scaleX }} />
             <Name />
+            {/* <ColorModeSwitcher /> */}
             {/* <Profile /> */}
             <AboutMe />
             <Education />

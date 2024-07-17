@@ -86,9 +86,9 @@ export default function Contact() {
         <Center>
           <Divider />
           <Flex>
-            {contactList.map(item => {
+            {contactList.map((item, indexItem) => {
               return (
-                <Box>
+                <Box key={indexItem}>
                   <Link href={item.link} target="_blank">
                     <Button variant="ghost" colorScheme="purple">
                       {item.icon}
