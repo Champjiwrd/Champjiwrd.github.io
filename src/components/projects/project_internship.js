@@ -32,7 +32,7 @@ export default function Project2() {
   return (
     <div>
       <div onClick={onOpen}>
-        <ProjectItem title={title} subtitle={subtitle} />
+        <ProjectItem title={title} subtitle={subtitle} tags={['Django']} />
       </div>
 
       <Modal

@@ -29,7 +29,7 @@ export default function Project1() {
   return (
     <div>
       <div onClick={onOpen}>
-        <ProjectItem title={title} subtitle={subtitle} />
+        <ProjectItem title={title} subtitle={subtitle} tags={['uxui']} />
       </div>
 
       <Modal
@@ -60,10 +60,11 @@ export default function Project1() {
               >
                 UX/UI
               </Text>
-              <Text
-                as="span"
-              >
-                {' '}is a subject taught at the university, and this project is a part of the course. It involves designing a user interface for a mobile application related to donation collection.
+              <Text as="span">
+                {' '}
+                is a subject taught at the university, and this project is a
+                part of the course. It involves designing a user interface for a
+                mobile application related to donation collection.
               </Text>
             </Box>
 
@@ -72,7 +73,13 @@ export default function Project1() {
             </Heading>
 
             <Box mt={5}>
-              <iframe title='Uxui project' width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FYV8ZPAHNxWEQc1ycmW6n2v%2Fuxui-ce%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D95-69%26viewport%3D-594%252C489%252C0.25%26t%3DWedo6IvDMCwV9HX7-1%26scaling%3Dscale-down%26mode%3Ddesign" allowfullscreen></iframe>
+              <iframe
+                title="Uxui project"
+                width="100%"
+                height="450"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FYV8ZPAHNxWEQc1ycmW6n2v%2Fuxui-ce%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D95-69%26viewport%3D-594%252C489%252C0.25%26t%3DWedo6IvDMCwV9HX7-1%26scaling%3Dscale-down%26mode%3Ddesign"
+                allowfullscreen
+              ></iframe>
             </Box>
             <Heading mt={12} size="md">
               TOOLS

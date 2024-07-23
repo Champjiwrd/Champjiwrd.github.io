@@ -115,7 +115,11 @@ export default function Project2() {
   return (
     <div>
       <div className="card-container" onClick={openModal}>
-        <ProjectItem title={title} subtitle={subtitle} />
+        <ProjectItem
+          title={title}
+          subtitle={subtitle}
+          tags={['Vue.js', 'Nuxt.js', 'Node.js', 'PHP']}
+        />
       </div>
 
       <Modal
@@ -188,15 +192,16 @@ export default function Project2() {
                 <b>Front-End</b>: HTML, CSS, Javascript, Nuxt.js, Vue.js
               </ListItem>
               <ListItem>
-                <b>Back-End</b>: Drupal (PHP)
+                <b>Back-End</b>: Drupal (PHP), Node.js
               </ListItem>
-              <ListItem>Automate Testing: Cypress</ListItem>
+              <ListItem>
+                <b>Automate Testing</b>: Cypress
+              </ListItem>
               <ListItem>
                 <Link href="https://map.longdo.com/main/" target="_blank">
                   Longdo Map
                 </Link>
               </ListItem>
-              <ListItem>Line Developer</ListItem>
             </UnorderedList>
             <Heading mt={12} size="md">
               WORKING PERIOD

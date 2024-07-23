@@ -8,10 +8,11 @@ import {
   Text,
   CardFooter,
   Button,
+  Badge,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-export default function projectItem({ title, subtitle }) {
+export default function projectItem({ title, subtitle, tags = [] }) {
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
   return (
@@ -54,6 +55,11 @@ export default function projectItem({ title, subtitle }) {
             <Text style={gradeStyle} py="2">
               {subtitle}
             </Text>
+            <Stack direction="row">
+              {(tags || []).map(tag => (
+                <Badge colorScheme="blue">{tag}</Badge>
+              ))}
+            </Stack>
           </CardBody>
 
           <CardFooter>

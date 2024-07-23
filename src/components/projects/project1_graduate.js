@@ -30,7 +30,7 @@ export default function Project1() {
   return (
     <div>
       <div onClick={onOpen}>
-        <ProjectItem title={title} subtitle={subtitle} />
+        <ProjectItem title={title} subtitle={subtitle} tags={['YOLO']} />
       </div>
 
       <Modal

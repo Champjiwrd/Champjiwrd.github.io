@@ -27,8 +27,8 @@ import { Carousel } from 'react-carousel-minimal';
 import { RiComputerLine } from 'react-icons/ri';
 
 export default function Project2() {
-  const title = 'Voccoli Project';
-  const subtitle = 'Vocabulary Website';
+  const title = 'Voccoli Website';
+  const subtitle = 'Personal Showcase Project';
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
@@ -66,7 +66,7 @@ export default function Project2() {
   return (
     <div>
       <div onClick={onOpen}>
-        <ProjectItem title={title} subtitle={subtitle} />
+        <ProjectItem title={title} subtitle={subtitle} tags={['React.js']} />
       </div>
 
       <Modal
