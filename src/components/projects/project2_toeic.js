@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Box,
   Button,
@@ -14,62 +14,67 @@ import {
   ListItem,
   Link,
   Icon,
-} from "@chakra-ui/react";
+  Center,
+  Divider,
+  Tag,
+} from '@chakra-ui/react';
 // import ProjectItem from "../projectItem";
-import ProjectItem from "../projectItem";
-import { FaChrome } from "react-icons/fa";
-import { BiLinkAlt } from "react-icons/bi";
-import "react-awesome-slider/dist/styles.css";
-import { Carousel } from "react-carousel-minimal";
+import ProjectItem from '../projectItem';
+import { FaChrome } from 'react-icons/fa';
+import { BiLinkAlt } from 'react-icons/bi';
+import 'react-awesome-slider/dist/styles.css';
+import { Carousel } from 'react-carousel-minimal';
+import { RiComputerLine } from 'react-icons/ri';
 
 export default function Project2() {
-  const title = "TOEIC Project";
-  const subtitle = "Django Website, 2021";
+  const title = 'Voccoli Website';
+  const subtitle = 'Personal Showcase Project';
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const gradeStyle = { color: "#FFBB56", fontSize: 14 };
+  const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
   const data = [
     {
-      image: "/project2/image1.png",
-      caption: "",
+      image: '/project2/image1.jpg',
+      caption: '',
     },
     {
-      image: "/project2/image2.png",
-      caption: "",
+      image: '/project2/image2.jpg',
+      caption: '',
     },
     {
-      image: "/project2/image3.png",
-      caption: "",
+      image: '/project2/image3.jpg',
+      caption: '',
     },
     {
-      image: "/project2/image4.png",
-      caption: "",
+      image: '/project2/image4.jpg',
+      caption: '',
     },
     {
-      image: "/project2/image5.png",
-      caption: "",
+      image: '/project2/image5.jpg',
+      caption: '',
+    },
+    {
+      image: '/project2/image6.jpg',
+      caption: '',
+    },
+    {
+      image: '/project2/image7.jpg',
+      caption: '',
     },
   ];
-  const captionStyle = {
-    fontSize: "2em",
-    fontWeight: "bold",
-  };
-  const slideNumberStyle = {
-    fontSize: "20px",
-    fontWeight: "bold",
-  };
-  const modalSize = window.innerWidth < 600 ? "full" : "6xl"; // Check window width for responsiveness
+
   return (
     <div>
       <div onClick={onOpen}>
-        <ProjectItem title={title} subtitle={subtitle} />
+        <ProjectItem title={title} subtitle={subtitle} tags={['React.js']} />
       </div>
 
       <Modal
         onClose={onClose}
-        size={modalSize}
+        size={{ base: 'full', lg: '4xl' }}
         isOpen={isOpen}
-        scrollBehavior={"inside"}
+        scrollBehavior={'inside'}
+        isCentered
       >
         <ModalOverlay />
         <ModalContent>
@@ -83,60 +88,71 @@ export default function Project2() {
           <ModalCloseButton />
           <ModalBody>
             {/* <Slider/> */}
-            <Carousel
-              data={data}
-              time={3000}
-              width="850px"
-              height="500px"
-              captionStyle={captionStyle}
-              radius="10px"
-              slideNumber={true}
-              slideNumberStyle={slideNumberStyle}
-              captionPosition="bottom"
-              automatic={true}
-              dots={true}
-              pauseIconColor="white"
-              pauseIconSize="40px"
-              slideBackgroundColor="darkgrey"
-              slideImageFit="cover"
-              thumbnails={false}
-              thumbnailWidth="100px"
-              style={{
-                textAlign: "center",
-                maxWidth: "850px",
-                maxHeight: "500px",
-                margin: "auto",
-              }}
-            />
-            <Heading marginTop={6} size="md">
-              TECHNOLOGIES
+            {/* <Image
+              borderRadius={10}
+              boxSize={'full'}
+              width={300}
+              src="/project2/image1.jpg"
+            /> */}
+            <Center>
+              <Carousel
+                data={data}
+                time={3000}
+                height={'500px'}
+                radius="10px"
+                automatic={true}
+                dots={true}
+                boxSize={'full'}
+                slideBackgroundColor="transparent"
+                slideImageFit={'contain'}
+              />
+            </Center>
+
+            <Heading mt={12} size="md">
+              OVERVIEW
             </Heading>
-            <UnorderedList>
-              <ListItem>Back-End: Django Python framework</ListItem>
-              <ListItem>Front-End: HTML, CSS, Javascript</ListItem>
-              <ListItem>Deploy on Herokuapp</ListItem>
-            </UnorderedList>
-            <Heading marginTop={6} size="md">
-              DEMO
-            </Heading>
-            <Link
-              href="
-            https://voccoli.com/
-            "
-              target="_blank"
-            >
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={FaChrome} />}
-              >
-                Visit Voccoli <Icon as={BiLinkAlt} />
-              </Button>
-            </Link>
-            <Box marginBottom={6} style={{ fontSize: "14px" }}>
-              *For test {"{ "}
-              username: test.voccoli, password: Test1234{" }"}*
+            <Box mt={3}>
+              This website is my personal website, created for the purpose of
+              vocabulary learning, with categorized word lists and vocabulary
+              quizzes. It provides tests for various vocabulary categories and
+              summarizes the words you answered correctly and incorrectly.
             </Box>
+            <Heading mt={12} size="md">
+              TOOLS
+            </Heading>
+            <UnorderedList mt={3}>
+              <ListItem>
+                <b>Front-End</b>: Vue.js, Vuetify
+              </ListItem>
+              <ListItem>
+                <b>Back-End</b>: Django Python framework
+              </ListItem>
+              <ListItem>
+                <b>Web Server</b>: NGINX
+              </ListItem>
+            </UnorderedList>
+            <Heading mt={12} size="md">
+              DEMO{' '}
+              <Tag size={'sm'} variant="solid" colorScheme="green">
+                Developing
+              </Tag>
+            </Heading>
+            <Box mt={3}>
+              <Link href="https://voccoli.com/" target="_blank">
+                <Button
+                  variant="outline"
+                  colorScheme="purple"
+                  leftIcon={<Icon as={FaChrome} />}
+                >
+                  Visit Voccoli <Icon as={BiLinkAlt} />
+                </Button>
+              </Link>
+            </Box>
+            <Center mt={12}>
+              <Divider mr={5} />
+              <RiComputerLine size={50} />
+              <Divider ml={5} />
+            </Center>
           </ModalBody>
           {/* <ModalFooter>
             <Button onClick={onClose}>Close</Button>

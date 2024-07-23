@@ -1,15 +1,32 @@
-import React from "react";
-import { Box, Heading, Flex } from "@chakra-ui/react";
-import CircleIcon from "./circle-icon";
-
+import React from 'react';
+import { Box, Heading, Flex } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 export default function AboutMe() {
   return (
-    <Box marginBottom={10}>
+    <Box mt={'30px'}>
       <Flex>
-        <CircleIcon boxSize={10} color="white.500" />
         <Box>
-          <Heading marginBottom={6}>About me</Heading>
-          <p>I am a full-stack Developer</p>
+          <Heading marginBottom={6}>About Me</Heading>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
+            <Box>
+              <p>
+                I'm a Full-Stack Developer with 3 years of experience in web
+                development. I am proficient in various programming languages,
+                frameworks, and technologies, including HTML, CSS, JavaScript,
+                Vue.js, Drupal, PHP, Python and others.
+              </p>
+            </Box>
+          </motion.div>
         </Box>
       </Flex>
     </Box>

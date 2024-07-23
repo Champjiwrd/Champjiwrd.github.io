@@ -1,11 +1,9 @@
 .icon-skill{
-    color: white;
     opacity: 0.7;
     padding: 8px;
-
 }
 .icon-skill:hover{
-    color: #E23E57;
+    color: #825BD1;
     border-radius: 10px;
     opacity: 1;
 }
@@ -16,16 +14,9 @@
 .card-project{
   cursor: pointer;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  background: rgb(162, 162, 162);
 }
-
-
-.card-project:hover{
-    cursor: pointer;
-    box-shadow:inset 0px 0px 0px 2px white;
-    border-radius: 8px;
-}
-
   
   .video-responsive {
     overflow: hidden;

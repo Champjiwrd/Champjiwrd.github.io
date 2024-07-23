@@ -1,60 +1,53 @@
-import React from "react";
+import React from 'react';
 import {
   Box,
-  Heading,
   Flex,
-  List,
-  ListItem,
-  Link,
   Button,
   Icon,
-} from "@chakra-ui/react";
+  Center,
+  Divider,
+  Link,
+} from '@chakra-ui/react';
 import {
   IoLogoInstagram,
   IoLogoGithub,
   IoLogoFacebook,
   IoMail,
   IoLogoLinkedin,
-} from "react-icons/io5";
-import { motion } from "framer-motion";
+} from 'react-icons/io5';
 
 export default function Contact() {
+  const iconSize = 60;
   const contactList = [
     {
-      link: "https://github.com/champjiwrd",
-      label: "@champjiwrd",
-      icon: <Icon as={IoLogoGithub} />,
+      link: 'https://github.com/champjiwrd',
+      label: '@champjiwrd',
+      icon: <Icon size={iconSize} as={IoLogoGithub} />,
     },
     {
-      link: "https://www.linkedin.com/in/warodom-baiudom-484180205",
-      label: "@warodom baiudom",
-      icon: <Icon as={IoLogoLinkedin} />,
+      link: 'https://www.linkedin.com/in/warodom-baiudom-484180205',
+      label: '@warodom baiudom',
+      icon: <Icon size={iconSize} as={IoLogoLinkedin} />,
     },
     {
-      link: "mailto:warodom.baiudom@gmail.com",
-      label: "mail",
-      icon: <Icon as={IoMail} />,
+      link: 'mailto:warodom.baiudom@gmail.com',
+      label: 'mail',
+      icon: <Icon size={iconSize} as={IoMail} />,
     },
     {
-      link: "https://facebook.com/champjiwrd",
-      label: "@Champ Warodom",
-      icon: <Icon as={IoLogoFacebook} />,
+      link: 'https://facebook.com/champjiwrd',
+      label: '@Champ Warodom',
+      icon: <Icon size={iconSize} as={IoLogoFacebook} />,
     },
     {
-      link: "https://instagram.com/champjiwrd",
-      label: "@champjiwrd",
-      icon: <Icon as={IoLogoInstagram} />,
+      link: 'https://instagram.com/champjiwrd',
+      label: '@champjiwrd',
+      icon: <Icon size={iconSize} as={IoLogoInstagram} />,
     },
   ];
   return (
-    <Box className="circle-icon" marginTop={-5} marginBottom={10}>
-      <Flex>
-        <Icon viewBox="0 0 200 200" boxSize={10} color="white">
-          <path
-            fill="white"
-            d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"
-          />
-        </Icon>
+    <Box marginTop={40} marginBottom={10}>
+      {/* <Flex>
         <Box>
           <Heading marginBottom={6}>Contact</Heading>
           <List>
@@ -64,8 +57,8 @@ export default function Contact() {
                   key={index}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false }}
-                  transition={{ duration: 0.3 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
                   variants={{
                     visible: { opacity: 1, scale: 1 },
                     hidden: { opacity: 0, scale: 0.5 },
@@ -87,7 +80,30 @@ export default function Contact() {
             })}
           </List>
         </Box>
-      </Flex>
+      </Flex> */}
+
+      <Box alignContent={'center'}>
+        <Center>
+          <Divider />
+          <Flex>
+            {contactList.map((item, indexItem) => {
+              return (
+                <Box key={indexItem}>
+                  <Link href={item.link} target="_blank">
+                    <Button variant="ghost" colorScheme="purple">
+                      {item.icon}
+                    </Button>
+                  </Link>
+                </Box>
+              );
+            })}
+          </Flex>
+          <Divider />
+        </Center>
+      </Box>
+      <Box>
+        <Center>Warodom Baiudom</Center>
+      </Box>
     </Box>
   );
 }

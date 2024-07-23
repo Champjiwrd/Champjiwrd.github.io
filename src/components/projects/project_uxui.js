@@ -11,7 +11,6 @@ import {
   Heading,
   UnorderedList,
   ListItem,
-  Image,
   Center,
   Divider,
   Text,
@@ -22,15 +21,15 @@ import 'react-awesome-slider/dist/styles.css';
 import { RiComputerLine } from 'react-icons/ri';
 
 export default function Project1() {
-  const title = 'Individual and Object Detection from CCTV';
-  const subtitle = 'Graduation Project, 2020 - 2021';
+  const title = 'UXUI Project';
+  const subtitle = 'UXUI Computer Engineering, 2020';
   const { isOpen, onOpen, onClose } = useDisclosure();
   const gradeStyle = { color: '#FFBB56', fontSize: 14 };
 
   return (
     <div>
       <div onClick={onOpen}>
-        <ProjectItem title={title} subtitle={subtitle} tags={['YOLO']} />
+        <ProjectItem title={title} subtitle={subtitle} tags={['uxui']} />
       </div>
 
       <Modal
@@ -59,15 +58,13 @@ export default function Project1() {
                 bgClip="text"
                 fontWeight="extrabold"
               >
-                The graduation project{' '}
+                UX/UI
               </Text>
               <Text as="span">
-                involves developing a tracking system for individuals based on
-                their shirt color. The objective of this project was to utilize
-                CCTV video for person detection and identification based on
-                their clothing color. This system aims to facilitate the process
-                of tracking and identifying individuals or suspects from CCTV
-                videos, thereby reducing the search time required.
+                {' '}
+                is a subject taught at the university, and this project is a
+                part of the course. It involves designing a user interface for a
+                mobile application related to donation collection.
               </Text>
             </Box>
 
@@ -76,18 +73,20 @@ export default function Project1() {
             </Heading>
 
             <Box mt={5}>
-              <Image
-                borderRadius={10}
-                boxSize={'full'}
-                src="/projects/cctv.gif"
-              />
+              <iframe
+                title="Uxui project"
+                width="100%"
+                height="450"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FYV8ZPAHNxWEQc1ycmW6n2v%2Fuxui-ce%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D95-69%26viewport%3D-594%252C489%252C0.25%26t%3DWedo6IvDMCwV9HX7-1%26scaling%3Dscale-down%26mode%3Ddesign"
+                allowfullscreen
+              ></iframe>
             </Box>
             <Heading mt={12} size="md">
               TOOLS
             </Heading>
             <UnorderedList mt={3}>
-              <ListItem>YOLOv4 Object Detection</ListItem>
-              <ListItem>Color Classification</ListItem>
+              <ListItem>figma</ListItem>
+              <ListItem>User Experiences</ListItem>
             </UnorderedList>
             <Center mt={12}>
               <Divider mr={5} />

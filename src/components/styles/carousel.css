@@ -1,0 +1,9 @@
+.carousel-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.carousel-item img,div.carousel-item.fade {
+    height: 500px;  /* change this to whatever you want */
+    width: auto;
+}
