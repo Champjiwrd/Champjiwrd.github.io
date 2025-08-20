@@ -1,20 +1,76 @@
-import React from "react";
-import Profile from "./components/profile";
-import AboutMe from "./components/about-me";
-import Education from "./components/education";
-import Experiences from "./components/experiences";
-import Contact from "./components/contact";
-import Project from "./components/project";
-import Skill from "./components/skill";
-import { VerticalTimeline } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+// import React from 'react';
+// import {
+//   ChakraProvider,
+//   Box,
+//   Text,
+//   Link,
+//   VStack,
+//   Code,
+//   Grid,
+//   theme,
+// } from '@chakra-ui/react';
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
+// import { Logo } from './Logo';
+
+// function App() {
+//   return (
+//     <ChakraProvider theme={theme}>
+//       <Box textAlign="center" fontSize="xl">
+//         <Grid minH="100vh" p={3}>
+//           <ColorModeSwitcher justifySelf="flex-end" />
+//           <VStack spacing={8}>
+//             <Logo h="40vmin" pointerEvents="none" />
+//             <Text>
+//               Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
+//             </Text>
+//             <Link
+//               color="teal.500"
+//               href="https://chakra-ui.com"
+//               fontSize="2xl"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               Learn Chakra
+//             </Link>
+//           </VStack>
+//         </Grid>
+//       </Box>
+//     </ChakraProvider>
+//   );
+// }
+
+// export default App;
+import React from 'react';
+import Name from './components/name';
+// import Profile from './components/profile';
+import AboutMe from './components/about-me';
+import Education from './components/education';
+import Experiences from './components/experiences';
+import Contact from './components/contact';
+import Project from './components/project';
+import Skill from './components/skill';
 import {
   Container,
-  Box,
-  ChakraProvider
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import theme from './theme' 
+  ChakraProvider,
+  Grid,
+  IconButton,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  ModalHeader,
+  Image,
+  Flex,
+} from '@chakra-ui/react';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import theme from './theme';
+import './components/styles/app.css';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { BsQrCodeScan } from 'react-icons/bs';
+// import './components/styles/verticalTimeline.css';
+import qrcode from './qr-code.svg';
 
 export default function App() {
   const variants = {
@@ -22,33 +78,71 @@ export default function App() {
     enter: { opacity: 1, x: 0, y: 0 },
     exit: { opacity: 0, x: -0, y: 20 },
   };
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <ChakraProvider theme={theme}>
-
-      <motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ duration: 0.6, type: "easeInOut" }}
-        style={{ position: "relative" }}
-      >
-        <Container>
-          <Profile />
-          <div style={{ marginTop: "-15px", marginLeft: "65px" }}>
-            <VerticalTimeline layout={"1-column-left"}>
-              <Box marginLeft={0}>
-                <AboutMe />
-                <Experiences />
-                <Project />
-                <Skill />
-                <Education />
-              </Box>
-            </VerticalTimeline>
+    <>
+      <ChakraProvider theme={theme}>
+        <Grid className="qrcode-bar">
+          <IconButton variant="ghost" justifySelf="flex-end" onClick={onOpen}>
+            <BsQrCodeScan />
+          </IconButton>
+        </Grid>
+        <Modal onClose={onClose} isOpen={isOpen} isCentered>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Visit My Portfolio</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Image src={qrcode} />
+              <Flex align="center" justify="center">
+                Champjiwrd.github.io
+              </Flex>
+            </ModalBody>
+            {/* <ModalFooter>
+              <Button onClick={onClose}>Close</Button>
+            </ModalFooter> */}
+          </ModalContent>
+        </Modal>
+        <motion.div
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ duration: 0.6, type: 'easeInOut' }}
+          style={{ position: 'relative' }}
+        >
+          <Container className="area">
+            <ul className="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <motion.div className="progress-bar" style={{ scaleX }} />
+            <Name />
+            {/* <ColorModeSwitcher /> */}
+            {/* <Profile /> */}
+            <AboutMe />
+            <Education />
+            <Experiences />
+            <Project />
+            <Skill />
             <Contact />
-          </div>
-        </Container>
-      </motion.div>
-    </ChakraProvider>
+          </Container>
+        </motion.div>
+      </ChakraProvider>
+    </>
   );
 }

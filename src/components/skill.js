@@ -1,48 +1,57 @@
-import React from "react";
-import { Box, Heading, Flex, Center, Wrap } from "@chakra-ui/react";
-import CircleIcon from "./circle-icon";
-import { IoLogoVue, IoLogoReact, IoLogoPython } from "react-icons/io5";
+import React from 'react';
+import { Box, Heading, Flex, Center, Wrap } from '@chakra-ui/react';
+import { IoLogoVue, IoLogoReact, IoLogoPython } from 'react-icons/io5';
 import {
   DiDjango,
   DiHtml5,
   DiCss3,
   DiJavascript,
   DiNodejs,
-} from "react-icons/di";
-import { SiPhp, SiNextdotjs, SiNuxtdotjs } from "react-icons/si";
-import { motion } from "framer-motion";
-import "./styles/skill.css";
-export default function skill() {
+  DiDrupal,
+  DiBootstrap
+} from 'react-icons/di';
+import { TbBrandCypress } from 'react-icons/tb';
+import { SiPhp, SiNextdotjs, SiNuxtdotjs, SiVuetify, SiChakraui } from 'react-icons/si';
+import { motion } from 'framer-motion';
+import './styles/skill.css';
+
+export default function Skill() {
   const iconSize = 60;
   const language = [
-    { id: 1, title: "HTML", icon: <DiHtml5 size={iconSize} /> },
-    { id: 2, title: "CSS", icon: <DiCss3 size={iconSize} /> },
-    { id: 3, title: "JavaScript", icon: <DiJavascript size={iconSize} /> },
-    { id: 4, title: "Python", icon: <IoLogoPython size={iconSize} /> },
-    { id: 5, title: "", icon: <SiPhp size={iconSize} /> },
+    { id: 1, title: 'HTML', icon: <DiHtml5 size={iconSize} /> },
+    { id: 2, title: 'CSS', icon: <DiCss3 size={iconSize} /> },
+    { id: 3, title: 'JavaScript', icon: <DiJavascript size={iconSize} /> },
+    { id: 4, title: 'Python', icon: <IoLogoPython size={iconSize} /> },
+    { id: 5, title: 'Php', icon: <SiPhp size={iconSize} /> },
   ];
   const framework = [
-    { title: "Vue.js", icon: <IoLogoVue size={iconSize} /> },
-    { title: "Nuxt.js", icon: <SiNuxtdotjs size={iconSize} /> },
-    { title: "React.js", icon: <IoLogoReact size={iconSize} /> },
-    { title: "Next.js", icon: <SiNextdotjs size={iconSize} /> },
-    { title: "Node.js", icon: <DiNodejs size={iconSize} /> },
-    { title: "", icon: <DiDjango size={iconSize} /> },
+    { title: 'Vue.js', icon: <IoLogoVue size={iconSize} /> },
+    { title: 'Nuxt.js', icon: <SiNuxtdotjs size={iconSize} /> },
+    { title: 'React.js', icon: <IoLogoReact size={iconSize} /> },
+    { title: 'Next.js', icon: <SiNextdotjs size={iconSize} /> },
+    { title: 'Node.js', icon: <DiNodejs size={iconSize} /> },
+    { title: 'Django', icon: <DiDjango size={iconSize} /> },
+    { title: 'Drupal', icon: <DiDrupal size={iconSize} /> },
+    { title: 'Cypress', icon: <TbBrandCypress size={iconSize} /> },
+    { title: 'Vuetify', icon: <SiVuetify size={iconSize} /> },
+    { title: 'Bootstrap', icon: <DiBootstrap size={iconSize} /> },
+    { title: 'Chakraui', icon: <SiChakraui size={iconSize} /> },
   ];
   let languageList = [];
+
   language.forEach((item, index) => {
     languageList.push(
       <motion.div
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
         transition={{
-          type: "spring",
+          type: 'spring',
           stiffness: 260,
           damping: 20,
         }}
         key={`languague-${index}`}
       >
-        <Box className="icon-skill" alignContent={"center"}>
+        <Box className="icon-skill" alignContent={'center'}>
           <Center>{item.icon}</Center>
           <Center>{item.title}</Center>
         </Box>
@@ -56,31 +65,31 @@ export default function skill() {
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
         transition={{
-          type: "spring",
+          type: 'spring',
           stiffness: 260,
           damping: 20,
         }}
         key={`framework-${index}`}
       >
-        <Box className="icon-skill" alignContent={"center"}>
+        <Box className="icon-skill" alignContent={'center'}>
           <Center>{item.icon}</Center>
           <Center>{item.title}</Center>
         </Box>
       </motion.div>
     );
   });
+
   return (
-    <Box marginBottom={10}>
+    <Box mt={'90px'}>
       <Flex>
-        <CircleIcon boxSize={10} color="white.500" />
         <Box>
-          <Heading marginBottom={6}>Technical skills</Heading>
+          <Heading marginBottom={6}>Technical Skills</Heading>
           <Box>
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
-              transition={{ duration: 0.3 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               variants={{
                 visible: { opacity: 1, scale: 1 },
                 hidden: { opacity: 0, scale: 0.5 },
@@ -88,20 +97,19 @@ export default function skill() {
             >
               <Wrap>{languageList}</Wrap>
             </motion.div>
+            <Heading size="md" marginY={6}>
+              Framework & Library
+            </Heading>
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
-              transition={{ duration: 0.3 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               variants={{
                 visible: { opacity: 1, scale: 1 },
                 hidden: { opacity: 0, scale: 0.5 },
               }}
             >
-              <Heading size="md" marginY={6}>
-                Framework & Library
-              </Heading>
-
               <Wrap>{framworkList}</Wrap>
             </motion.div>
           </Box>
