@@ -11,7 +11,7 @@ export default function name() {
         fontSize="6xl"
         fontWeight="extrabold"
       >
-        Warodom Baiudom Test 1
+        Warodom Baiudom Test 2
       </Heading>
       <Heading size={'xl'}>
         <Typewriter
