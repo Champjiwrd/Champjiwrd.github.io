@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "https://Champjiwrd.github.io/static/css/main.2a5fd3c2.css",
-    "main.js": "https://Champjiwrd.github.io/static/js/main.39b5e250.js",
+    "main.js": "https://Champjiwrd.github.io/static/js/main.b812d9f8.js",
     "static/js/787.aeca62f9.chunk.js": "https://Champjiwrd.github.io/static/js/787.aeca62f9.chunk.js",
     "static/media/qr-code.svg": "https://Champjiwrd.github.io/static/media/qr-code.220fb8a520a1246c407a3ad104237335.svg",
     "index.html": "https://Champjiwrd.github.io/index.html",
     "main.2a5fd3c2.css.map": "https://Champjiwrd.github.io/static/css/main.2a5fd3c2.css.map",
-    "main.39b5e250.js.map": "https://Champjiwrd.github.io/static/js/main.39b5e250.js.map",
+    "main.b812d9f8.js.map": "https://Champjiwrd.github.io/static/js/main.b812d9f8.js.map",
     "787.aeca62f9.chunk.js.map": "https://Champjiwrd.github.io/static/js/787.aeca62f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a5fd3c2.css",
-    "static/js/main.39b5e250.js"
+    "static/js/main.b812d9f8.js"
   ]
 }
