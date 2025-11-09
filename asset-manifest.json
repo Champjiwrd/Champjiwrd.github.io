@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "https://Champjiwrd.github.io/static/css/main.22eb133a.css",
-    "main.js": "https://Champjiwrd.github.io/static/js/main.7ae3fb40.js",
+    "main.css": "https://Champjiwrd.github.io/static/css/main.2a5fd3c2.css",
+    "main.js": "https://Champjiwrd.github.io/static/js/main.a71e29ad.js",
     "static/js/787.aeca62f9.chunk.js": "https://Champjiwrd.github.io/static/js/787.aeca62f9.chunk.js",
     "static/media/qr-code.svg": "https://Champjiwrd.github.io/static/media/qr-code.220fb8a520a1246c407a3ad104237335.svg",
     "index.html": "https://Champjiwrd.github.io/index.html",
-    "main.22eb133a.css.map": "https://Champjiwrd.github.io/static/css/main.22eb133a.css.map",
-    "main.7ae3fb40.js.map": "https://Champjiwrd.github.io/static/js/main.7ae3fb40.js.map",
+    "main.2a5fd3c2.css.map": "https://Champjiwrd.github.io/static/css/main.2a5fd3c2.css.map",
+    "main.a71e29ad.js.map": "https://Champjiwrd.github.io/static/js/main.a71e29ad.js.map",
     "787.aeca62f9.chunk.js.map": "https://Champjiwrd.github.io/static/js/787.aeca62f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22eb133a.css",
-    "static/js/main.7ae3fb40.js"
+    "static/css/main.2a5fd3c2.css",
+    "static/js/main.a71e29ad.js"
   ]
 }
